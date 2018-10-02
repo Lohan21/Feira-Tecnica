@@ -1,0 +1,12 @@
+C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\feiratecnica.db
+C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\FeiraTecnica.exe.config
+C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\FeiraTecnica.exe
+C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\FeiraTecnica.pdb
+C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.TelaBancoDados.resources
+C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.Properties.Resources.resources
+C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.TelaLogin.resources
+C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.TelaPrincipal.resources
+C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.telaRegistro.resources
+C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.csproj.GenerateResource.Cache
+C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.exe
+C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.pdb
