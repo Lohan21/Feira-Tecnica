@@ -19,11 +19,6 @@ namespace FeiraTecnica
             telaL = telaLogin;
         }
 
-        private void telaRegistro_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void telaRegistro_FormClosed(object sender, FormClosedEventArgs e)
         {
             telaL.Show();

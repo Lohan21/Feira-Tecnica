@@ -10,3 +10,6 @@ C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debu
 C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.csproj.GenerateResource.Cache
 C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.exe
 C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.pdb
+C:\Users\Lohan\Desktop\TesteGitLohan\Feira-Tecnica\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\FeiraTecnica.exe.config
+C:\Users\Lohan\Desktop\TesteGitLohan\Feira-Tecnica\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.exe
+C:\Users\Lohan\Desktop\TesteGitLohan\Feira-Tecnica\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.pdb
