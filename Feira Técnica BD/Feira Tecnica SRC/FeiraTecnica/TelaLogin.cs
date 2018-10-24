@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,31 +13,90 @@ namespace FeiraTecnica
 {
     public partial class TelaLogin : Form
     {
+        string database = "feiratecnica.db";
+
+        SQLiteConnection conexao = new SQLiteConnection();
         public TelaLogin()
         {
             InitializeComponent();
+#if DEBUG
+            database = @"..\..\..\..\db sqlite\feiratecnica.db";
+#endif
+            conexao = new SQLiteConnection("Data Source=" + database + ";Version=3;");
         }
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-            string usuario = tbUsuario.Text;
-            string senha = tbSenha.Text;
+            int administrador = 1;
 
-            if (usuario != "" && senha != "")
+            string usuario = tbUsuario.Text;
+            SQLiteCommand Login = new SQLiteCommand("SELECT `usuario`, `senha` FROM `usuario` WHERE `usuario` = '" + tbUsuario.Text + "' AND `senha` = '" + tbSenha.Text + "' AND `administrador` = '"+administrador+"'", conexao);
+            SQLiteDataReader myReader;
+            conexao.Open();
+            myReader = Login.ExecuteReader();
+            int count = 0;
+            while (myReader.Read())
             {
-                TelaPrincipal tela = new TelaPrincipal(this, usuario);
+
+                count += 1;
+
+            }
+
+            if (count == 1)
+            {
+                
+                TelaPrincipal tela = new TelaPrincipal(this,usuario);
+
 
                 tela.Show();
+                tbUsuario.Clear();
+                tbSenha.Clear();
+                conexao.Close();
 
                 this.Hide();
 
+            }
+            else if (count == 0)
+            {
+                conexao.Close();              
+                Logar();
+            }
+
+        }
+
+        private void Logar()
+        {
+
+            string usuario = tbUsuario.Text;
+            SQLiteCommand Login = new SQLiteCommand("SELECT `usuario`, `senha` FROM `usuario` WHERE `usuario` = '" + tbUsuario.Text + "' AND `senha` = '" + tbSenha.Text + "'", conexao);
+            SQLiteDataReader myReader;
+            conexao.Open();
+            myReader = Login.ExecuteReader();
+            int count = 0;
+            while (myReader.Read())
+            {
+
+                count += 1;
+
+            }
+
+            if (count == 1)
+            {
+                TelaPrincipal tela = new TelaPrincipal(this,usuario);
+
+                tela.Show();
                 tbUsuario.Clear();
                 tbSenha.Clear();
+                conexao.Close();
+                this.Hide();
+
             }
-            else
+            else if (count == 0)
             {
-                MessageBox.Show("Digite o usuário e a senha");
+                MessageBox.Show("Usuário ou senha inválidos", "Erro");
+                conexao.Close();
             }
+
         }
 
         private void btSair_Click(object sender, EventArgs e)
@@ -51,8 +111,10 @@ namespace FeiraTecnica
 
         private void btRegistrar_Click(object sender, EventArgs e)
         {
+           
             telaRegistro telaRegistro = new telaRegistro(this);
             telaRegistro.Show();
+            conexao.Close();
             this.Hide();
         }
     }

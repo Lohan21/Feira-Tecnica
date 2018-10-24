@@ -13,14 +13,16 @@ namespace FeiraTecnica
     public partial class TelaPrincipal : Form
     {
         TelaLogin telaL;
-        string usuario = "";
+        string user = "";
+        
 
         public TelaPrincipal(TelaLogin telaLogin, string usuario)
         {
+            user = usuario;
             InitializeComponent();
+            lbUsuario.Text = "Olá: "+usuario+".";
             telaL = telaLogin;
-            this.usuario = usuario;
-            lbUsuario.Text = "Olá " + usuario + ",";
+            
         }
 
         private void TelaPrincipal_FormClosed(object sender, FormClosedEventArgs e)
@@ -30,11 +32,30 @@ namespace FeiraTecnica
 
         private void menuItemListarFuncionarios_Click(object sender, EventArgs e)
         {
-            TelaBancoDados tela = new TelaBancoDados(this);
 
-            tela.Show();
-
+            ListarFuncionarios listarFunc = new ListarFuncionarios(this);
             this.Hide();
+            listarFunc.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            TelaRegistroFuncionario registroFunc = new TelaRegistroFuncionario(this);
+            this.Hide();
+            registroFunc.Show();
+
+
+            
         }
     }
 }
