@@ -66,23 +66,32 @@ namespace FeiraTecnica
 
         private void Logar()
         {
-
-            string usuario = tbUsuario.Text;
-            SQLiteCommand Login = new SQLiteCommand("SELECT `usuario`, `senha` FROM `usuario` WHERE `usuario` = '" + tbUsuario.Text + "' AND `senha` = '" + tbSenha.Text + "'", conexao);
+            string email = "";
+            SQLiteCommand Login = new SQLiteCommand("SELECT `email` FROM `usuario` WHERE `usuario` = '" + tbUsuario.Text + "' AND `senha` = '" + tbSenha.Text + "'", conexao);
             SQLiteDataReader myReader;
             conexao.Open();
             myReader = Login.ExecuteReader();
             int count = 0;
             while (myReader.Read())
             {
-
+                email = myReader["email"].ToString();
                 count += 1;
 
             }
 
             if (count == 1)
             {
-                TelaPrincipal tela = new TelaPrincipal(this,usuario);
+                string nome = "";
+                SQLiteCommand cliente = new SQLiteCommand("SELECT `nome` FROM `clientes` WHERE `email` = '" + email + "'", conexao);
+                SQLiteDataReader myReader2;
+                myReader2 = cliente.ExecuteReader();
+
+                while (myReader2.Read())
+                {
+                    nome = myReader2["nome"].ToString();
+                }
+                
+                TelaPrincipal tela = new TelaPrincipal(this,nome);
 
                 tela.Show();
                 tbUsuario.Clear();

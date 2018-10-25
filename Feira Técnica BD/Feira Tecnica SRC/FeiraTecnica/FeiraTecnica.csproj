@@ -96,6 +96,7 @@
     <Compile Include="TelaRegistroFuncionario.Designer.cs">
       <DependentUpon>TelaRegistroFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="WebCEP.cs" />
     <EmbeddedResource Include="ListarFuncionarios.resx">
       <DependentUpon>ListarFuncionarios.cs</DependentUpon>
     </EmbeddedResource>

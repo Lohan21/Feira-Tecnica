@@ -73,7 +73,7 @@ namespace FeiraTecnica
                 usuario = tbUsuario.Text.ToString();
                 Email = tbEmail.Text.ToString();
                 DataN = tbNascimento.Value;
-                Rua = tbRua.Text.ToString();
+                Rua = tbEndereco.Text.ToString();
                 Bairro = tbBairro.Text.ToString();
                 Cidade = tbCidade.Text.ToString();
                 Complemento = tbComplemento.Text.ToString();
@@ -151,17 +151,6 @@ namespace FeiraTecnica
             comandoCriarRegistroUsuario.ExecuteNonQuery();            
         }
 
-        private void cbMasculino_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void cbFeminino_CheckedChanged(object sender, EventArgs e)
-        {
-          
-
-        }
-
         private void rbFisica_Click(object sender, EventArgs e)
         {
             tbCPF.Enabled = true;
@@ -202,16 +191,6 @@ namespace FeiraTecnica
             checarNumero(e);
         }
 
-        private void tbNumero_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void tbCEP_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void tbCEP_KeyPress(object sender, KeyPressEventArgs e)
         {
             checarNumero(e);
@@ -221,16 +200,20 @@ namespace FeiraTecnica
         {
             checarNumero(e);
         }
-
-        private void tbCelular_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-        }
        
 
         private void tbCelular_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             checarNumero(e);
+        }
+
+        private void tbCEP_Leave(object sender, EventArgs e)
+        {
+            WebCEP webCep = new WebCEP(tbCEP.Text);
+            tbEndereco.Text = webCep.TipoLogradouro + " " + webCep.Logradouro;
+            tbBairro.Text = webCep.Bairro;
+            tbUF.Text = webCep.UF;
+            tbCidade.Text = webCep.Cidade;
         }
     }
 }

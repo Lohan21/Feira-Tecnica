@@ -12,15 +12,12 @@ namespace FeiraTecnica
 {
     public partial class TelaPrincipal : Form
     {
-        TelaLogin telaL;
-        string user = "";
-        
+        TelaLogin telaL;       
 
-        public TelaPrincipal(TelaLogin telaLogin, string usuario)
-        {
-            user = usuario;
+        public TelaPrincipal(TelaLogin telaLogin, string nome)
+        {           
             InitializeComponent();
-            lbUsuario.Text = "Olá: "+usuario+".";
+            lbUsuario.Text = "Olá: "+nome+".";
             telaL = telaLogin;
             
         }
