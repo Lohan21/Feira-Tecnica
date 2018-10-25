@@ -447,6 +447,7 @@
             this.Controls.Add(this.lbNome);
             this.Controls.Add(this.tbNome);
             this.Name = "telaRegistro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "telaRegistro";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.telaRegistro_FormClosed);
             this.ResumeLayout(false);

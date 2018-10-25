@@ -37,10 +37,9 @@ namespace FeiraTecnica
             try
             {
                 conexao.Open();
-                string nome, Email, DataN, Rua, Bairro, Cidade, Complemento, Senha, UF;
+                string nome, Email, DataN, Rua, Bairro, Cidade, Complemento, Senha, UF, usuario;
                 int celular, Numero, CEP, setor;
-                bool sexo, tipo;
-                tipo = true;
+                bool sexo;
                 sexo = true;
 
 
@@ -56,16 +55,10 @@ namespace FeiraTecnica
                 }
 
 
-                if (rbFisica.Checked)
-                {
-                    tipo = true;
-                }
-                else if (rbEmpresarial.Checked)
-                {
-                    tipo = false;
-                }
+              
 
                 nome = tbNome.Text.ToString();
+                usuario = tbUsuario.Text.ToString();
                 Email = tbEmail.Text.ToString();
                 DataN = tbNascimento.Text.ToString();
                 Rua = tbRua.Text.ToString();
@@ -107,7 +100,7 @@ namespace FeiraTecnica
                 }
 
                 string criarRegistroPessoa = "INSERT INTO `funcionarios` (`nome`,`email`,`celular`,`data_nascimento`,`senha`,`cpf`,`cnpj`,`sexo`,`codigo_cargo`,`rua`,`numero_casa`,`complemento_endereco`,`bairro`,`cep`,`cidade`,`uf`,`setor_id`) VALUES ('" + nome + "','" + Email + "','" + celular + "','" + DataN + "','" + Senha + "','" + tbCPF.Text + "','" + tbCNPJ.Text + "','" + sexo + "','" + null + "','" + Rua + "','" + Numero + "','" + Complemento + "','" + Bairro + "','" + CEP + "','" + Cidade + "','" + UF + "','" + setor + "');";
-                string criarRegistroUsuario = "INSERT INTO `usuario` (`usuario`,`senha`,`tipo`,`administrador`) VALUES ('" + Email + "','" + Senha + "','" + cliente + "','" + administrador + "');";
+                string criarRegistroUsuario = "INSERT INTO `usuario` (`usuario`,`senha`,`tipo`,`administrador`) VALUES ('" + usuario + "','" + Senha + "','" + cliente + "','" + administrador + "');";
                 SQLiteCommand comandoCriarRegistroPessoa = new SQLiteCommand(criarRegistroPessoa, conexao);
                 SQLiteCommand ComandoCriarRegistroUsuario = new SQLiteCommand(criarRegistroUsuario, conexao);
                 comandoCriarRegistroPessoa.ExecuteNonQuery();

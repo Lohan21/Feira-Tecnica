@@ -53,6 +53,7 @@
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(181, 20);
             this.tbUsuario.TabIndex = 1;
+            this.tbUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbUsuario_KeyDown);
             // 
             // lbNomeEmpresa
             // 
@@ -71,6 +72,7 @@
             this.tbSenha.PasswordChar = '*';
             this.tbSenha.Size = new System.Drawing.Size(181, 20);
             this.tbSenha.TabIndex = 4;
+            this.tbSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbSenha_KeyDown);
             // 
             // lbSenha
             // 

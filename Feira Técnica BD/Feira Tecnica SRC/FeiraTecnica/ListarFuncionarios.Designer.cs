@@ -47,6 +47,7 @@
             this.ClientSize = new System.Drawing.Size(345, 197);
             this.Controls.Add(this.dtFuncionarios);
             this.Name = "ListarFuncionarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListarFuncionarios";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ListarFuncionarios_FormClosed);
             this.Load += new System.EventHandler(this.ListarFuncionarios_Load);

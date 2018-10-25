@@ -54,8 +54,7 @@ namespace FeiraTecnica
                 string celular, nome, Email, Rua, Bairro, Cidade, Complemento, Senha, UF, CEP, usuario;
                 DateTime DataN;
                 int Numero;
-                bool sexo, tipo;
-                tipo = true;
+                bool sexo;
                 sexo = true;
 
 
@@ -68,16 +67,6 @@ namespace FeiraTecnica
                 {
 
                     sexo = false;
-                }
-
-
-                if (rbFisica.Checked)
-                {
-                    tipo = true;
-                }
-                else if (rbEmpresarial.Checked)
-                {
-                    tipo = false;
                 }
 
                 nome = tbNome.Text.ToString();
@@ -102,18 +91,27 @@ namespace FeiraTecnica
                     return;
                 }
 
-                conexao = new SQLiteConnection("Data Source=" + database + ";Version=3;");
-                conexao.Open();
-                string criarRegistroPessoa = "INSERT INTO `clientes` (`nome`,`email`,`celular`,`data_nascimento`,`senha`,`cpf`,`cnpj`,`sexo`,`tipo`,`rua`,`numero_casa`,`complemento_endereco`,`bairro`,`cep`,`cidade`,`uf`,`codigo_servico`) VALUES ('" + nome + "','" + Email + "','" + celular + "','" + DataN.ToString("yyyy-MM-dd") + "','" + Senha + "','" + tbCPF.Text + "','" + tbCNPJ.Text + "','" + sexo + "','" + tipo + "','" + Rua + "','" + Numero + "','" + Complemento + "','" + Bairro + "','" + CEP + "','" + Cidade + "','" + UF + "','" + null + "');";
-                string criarRegistroUsuario = "INSERT INTO `usuario` (`usuario`,`senha`,`tipo`,`administrador`,`email`) VALUES ('" + usuario + "','" + Senha + "','" + cliente + "','" + administrador + "','" + Email + "');";
-                SQLiteCommand comandoCriarRegistroPessoa = new SQLiteCommand(criarRegistroPessoa, conexao);
-                SQLiteCommand comandoCriarRegistroUsuario = new SQLiteCommand(criarRegistroUsuario, conexao);
-                comandoCriarRegistroPessoa.ExecuteNonQuery();
-                comandoCriarRegistroUsuario.ExecuteNonQuery();
-                MessageBox.Show("Registro feito com sucesso!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                conexao.Close();
+                if (EmailEhValido(Email))
+                {
+                    try
+                    {
+                        SalvarNoBanco(celular, nome, Email, Rua, Bairro, Cidade, Complemento, Senha, UF, CEP, usuario, DataN, Numero, sexo, cliente, administrador);
 
-                button2_Click(null, null);
+                        MessageBox.Show("Registro feito com sucesso!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        button2_Click(null, null);
+                    }
+                    catch (Exception exception)
+                    {
+                        Console.WriteLine(exception);
+                        MessageBox.Show(exception.InnerException.ToString(), "erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("E-mail inválido!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                
+                conexao.Close();
             }
             catch (Exception exception)
             {
@@ -121,6 +119,36 @@ namespace FeiraTecnica
                 MessageBox.Show("preencha todos os valores corretamente para se registrar!", "erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
+        }
+
+        private bool EmailEhValido(string email)
+        {
+            bool retorno = true;
+
+            conexao = new SQLiteConnection("Data Source=" + database + ";Version=3;");
+            conexao.Open();
+
+            SQLiteCommand consulta = new SQLiteCommand("SELECT `email` FROM `usuario` WHERE `email` = '" + email + "'", conexao);
+            SQLiteDataReader myReader = consulta.ExecuteReader();
+
+            while (myReader.Read())
+            {
+                retorno = false;
+            }           
+
+            return retorno;
+        }
+
+        private void SalvarNoBanco(string celular, string nome, string Email, string Rua, string Bairro, string Cidade, string Complemento, string Senha, string UF, string CEP, string usuario, DateTime DataN, int Numero, bool sexo, bool cliente, bool administrador)
+        {
+            conexao = new SQLiteConnection("Data Source=" + database + ";Version=3;");
+            conexao.Open();
+            string criarRegistroPessoa = "INSERT INTO `clientes` (`nome`,`email`,`celular`,`data_nascimento`,`senha`,`cpf`,`cnpj`,`sexo`, `tipo`, `rua`,`numero_casa`,`complemento_endereco`,`bairro`,`cep`,`cidade`,`uf`,`codigo_servico`) VALUES ('" + nome + "','" + Email + "','" + celular + "','" + DataN.ToString("yyyy-MM-dd") + "','" + Senha + "','" + tbCPF.Text + "','" + tbCNPJ.Text + "','" + sexo + "','" + cliente + "','" + Rua + "','" + Numero + "','" + Complemento + "','" + Bairro + "','" + CEP + "','" + Cidade + "','" + UF + "','" + null + "');";
+            string criarRegistroUsuario = "INSERT INTO `usuario` (`usuario`,`senha`,`tipo`,`administrador`,`email`) VALUES ('" + usuario + "','" + Senha + "','" + cliente + "','" + administrador + "','" + Email + "');";
+            SQLiteCommand comandoCriarRegistroPessoa = new SQLiteCommand(criarRegistroPessoa, conexao);
+            SQLiteCommand comandoCriarRegistroUsuario = new SQLiteCommand(criarRegistroUsuario, conexao);
+            comandoCriarRegistroPessoa.ExecuteNonQuery();
+            comandoCriarRegistroUsuario.ExecuteNonQuery();            
         }
 
         private void cbMasculino_CheckedChanged(object sender, EventArgs e)

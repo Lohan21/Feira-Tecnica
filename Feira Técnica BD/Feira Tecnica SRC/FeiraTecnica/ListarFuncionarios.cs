@@ -14,7 +14,7 @@ namespace FeiraTecnica
     public partial class ListarFuncionarios : Form
     {
         TelaPrincipal telaP;
-        string database = "feiratecnica.db";
+        string database = @"..\..\..\..\db sqlite\feiratecnica.db";
         SQLiteConnection conexao = new SQLiteConnection();
         public ListarFuncionarios(TelaPrincipal telaPrincipal)
         {

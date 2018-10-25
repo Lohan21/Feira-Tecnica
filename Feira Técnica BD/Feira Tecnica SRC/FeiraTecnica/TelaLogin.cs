@@ -117,5 +117,21 @@ namespace FeiraTecnica
             conexao.Close();
             this.Hide();
         }
+
+        private void tbUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Logar();
+            }
+        }
+
+        private void tbSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Logar();
+            }
+        }
     }
 }

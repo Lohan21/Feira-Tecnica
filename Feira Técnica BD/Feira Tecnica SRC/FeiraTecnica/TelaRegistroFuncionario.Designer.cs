@@ -65,11 +65,13 @@
             this.tbNome = new System.Windows.Forms.TextBox();
             this.cmbSetores = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // tbSenha
             // 
-            this.tbSenha.Location = new System.Drawing.Point(360, 312);
+            this.tbSenha.Location = new System.Drawing.Point(218, 318);
             this.tbSenha.Name = "tbSenha";
             this.tbSenha.Size = new System.Drawing.Size(100, 20);
             this.tbSenha.TabIndex = 69;
@@ -77,7 +79,7 @@
             // lbSenha
             // 
             this.lbSenha.AutoSize = true;
-            this.lbSenha.Location = new System.Drawing.Point(272, 315);
+            this.lbSenha.Location = new System.Drawing.Point(130, 321);
             this.lbSenha.Name = "lbSenha";
             this.lbSenha.Size = new System.Drawing.Size(41, 13);
             this.lbSenha.TabIndex = 68;
@@ -85,7 +87,7 @@
             // 
             // btVoltar
             // 
-            this.btVoltar.Location = new System.Drawing.Point(398, 385);
+            this.btVoltar.Location = new System.Drawing.Point(256, 391);
             this.btVoltar.Name = "btVoltar";
             this.btVoltar.Size = new System.Drawing.Size(75, 23);
             this.btVoltar.TabIndex = 67;
@@ -95,7 +97,7 @@
             // 
             // btRegistrar
             // 
-            this.btRegistrar.Location = new System.Drawing.Point(296, 385);
+            this.btRegistrar.Location = new System.Drawing.Point(154, 391);
             this.btRegistrar.Name = "btRegistrar";
             this.btRegistrar.Size = new System.Drawing.Size(75, 23);
             this.btRegistrar.TabIndex = 66;
@@ -106,7 +108,7 @@
             // lbSexo
             // 
             this.lbSexo.AutoSize = true;
-            this.lbSexo.Location = new System.Drawing.Point(395, 73);
+            this.lbSexo.Location = new System.Drawing.Point(253, 79);
             this.lbSexo.Name = "lbSexo";
             this.lbSexo.Size = new System.Drawing.Size(31, 13);
             this.lbSexo.TabIndex = 65;
@@ -115,7 +117,7 @@
             // cbFeminino
             // 
             this.cbFeminino.AutoSize = true;
-            this.cbFeminino.Location = new System.Drawing.Point(436, 104);
+            this.cbFeminino.Location = new System.Drawing.Point(294, 110);
             this.cbFeminino.Name = "cbFeminino";
             this.cbFeminino.Size = new System.Drawing.Size(68, 17);
             this.cbFeminino.TabIndex = 64;
@@ -126,7 +128,7 @@
             // cbMasculino
             // 
             this.cbMasculino.AutoSize = true;
-            this.cbMasculino.Location = new System.Drawing.Point(323, 104);
+            this.cbMasculino.Location = new System.Drawing.Point(181, 110);
             this.cbMasculino.Name = "cbMasculino";
             this.cbMasculino.Size = new System.Drawing.Size(74, 17);
             this.cbMasculino.TabIndex = 63;
@@ -137,7 +139,7 @@
             // rbEmpresarial
             // 
             this.rbEmpresarial.AutoSize = true;
-            this.rbEmpresarial.Location = new System.Drawing.Point(417, 138);
+            this.rbEmpresarial.Location = new System.Drawing.Point(275, 144);
             this.rbEmpresarial.Name = "rbEmpresarial";
             this.rbEmpresarial.Size = new System.Drawing.Size(117, 17);
             this.rbEmpresarial.TabIndex = 62;
@@ -150,7 +152,7 @@
             // 
             this.rbFisica.AutoSize = true;
             this.rbFisica.Checked = true;
-            this.rbFisica.Location = new System.Drawing.Point(295, 138);
+            this.rbFisica.Location = new System.Drawing.Point(153, 144);
             this.rbFisica.Name = "rbFisica";
             this.rbFisica.Size = new System.Drawing.Size(92, 17);
             this.rbFisica.TabIndex = 61;
@@ -161,7 +163,7 @@
             // 
             // tbUF
             // 
-            this.tbUF.Location = new System.Drawing.Point(514, 248);
+            this.tbUF.Location = new System.Drawing.Point(372, 254);
             this.tbUF.Name = "tbUF";
             this.tbUF.Size = new System.Drawing.Size(100, 20);
             this.tbUF.TabIndex = 60;
@@ -169,7 +171,7 @@
             // lbUF
             // 
             this.lbUF.AutoSize = true;
-            this.lbUF.Location = new System.Drawing.Point(480, 251);
+            this.lbUF.Location = new System.Drawing.Point(338, 257);
             this.lbUF.Name = "lbUF";
             this.lbUF.Size = new System.Drawing.Size(24, 13);
             this.lbUF.TabIndex = 59;
@@ -177,7 +179,7 @@
             // 
             // tbCEP
             // 
-            this.tbCEP.Location = new System.Drawing.Point(360, 245);
+            this.tbCEP.Location = new System.Drawing.Point(218, 251);
             this.tbCEP.Name = "tbCEP";
             this.tbCEP.Size = new System.Drawing.Size(100, 20);
             this.tbCEP.TabIndex = 58;
@@ -186,7 +188,7 @@
             // lbCEP
             // 
             this.lbCEP.AutoSize = true;
-            this.lbCEP.Location = new System.Drawing.Point(325, 248);
+            this.lbCEP.Location = new System.Drawing.Point(183, 254);
             this.lbCEP.Name = "lbCEP";
             this.lbCEP.Size = new System.Drawing.Size(29, 13);
             this.lbCEP.TabIndex = 57;
@@ -195,7 +197,7 @@
             // lbCidade
             // 
             this.lbCidade.AutoSize = true;
-            this.lbCidade.Location = new System.Drawing.Point(156, 245);
+            this.lbCidade.Location = new System.Drawing.Point(14, 251);
             this.lbCidade.Name = "lbCidade";
             this.lbCidade.Size = new System.Drawing.Size(43, 13);
             this.lbCidade.TabIndex = 56;
@@ -203,7 +205,7 @@
             // 
             // tbComplemento
             // 
-            this.tbComplemento.Location = new System.Drawing.Point(360, 286);
+            this.tbComplemento.Location = new System.Drawing.Point(218, 292);
             this.tbComplemento.Name = "tbComplemento";
             this.tbComplemento.Size = new System.Drawing.Size(100, 20);
             this.tbComplemento.TabIndex = 55;
@@ -211,7 +213,7 @@
             // lbComplemento
             // 
             this.lbComplemento.AutoSize = true;
-            this.lbComplemento.Location = new System.Drawing.Point(272, 289);
+            this.lbComplemento.Location = new System.Drawing.Point(130, 295);
             this.lbComplemento.Name = "lbComplemento";
             this.lbComplemento.Size = new System.Drawing.Size(74, 13);
             this.lbComplemento.TabIndex = 54;
@@ -219,7 +221,7 @@
             // 
             // tbCidade
             // 
-            this.tbCidade.Location = new System.Drawing.Point(205, 242);
+            this.tbCidade.Location = new System.Drawing.Point(63, 248);
             this.tbCidade.Name = "tbCidade";
             this.tbCidade.Size = new System.Drawing.Size(100, 20);
             this.tbCidade.TabIndex = 53;
@@ -227,7 +229,7 @@
             // lbBairro
             // 
             this.lbBairro.AutoSize = true;
-            this.lbBairro.Location = new System.Drawing.Point(471, 208);
+            this.lbBairro.Location = new System.Drawing.Point(329, 214);
             this.lbBairro.Name = "lbBairro";
             this.lbBairro.Size = new System.Drawing.Size(37, 13);
             this.lbBairro.TabIndex = 52;
@@ -235,7 +237,7 @@
             // 
             // tbBairro
             // 
-            this.tbBairro.Location = new System.Drawing.Point(514, 205);
+            this.tbBairro.Location = new System.Drawing.Point(372, 211);
             this.tbBairro.Name = "tbBairro";
             this.tbBairro.Size = new System.Drawing.Size(100, 20);
             this.tbBairro.TabIndex = 51;
@@ -243,7 +245,7 @@
             // lbNumero
             // 
             this.lbNumero.AutoSize = true;
-            this.lbNumero.Location = new System.Drawing.Point(305, 208);
+            this.lbNumero.Location = new System.Drawing.Point(163, 214);
             this.lbNumero.Name = "lbNumero";
             this.lbNumero.Size = new System.Drawing.Size(47, 13);
             this.lbNumero.TabIndex = 50;
@@ -251,7 +253,7 @@
             // 
             // tbNumero
             // 
-            this.tbNumero.Location = new System.Drawing.Point(358, 205);
+            this.tbNumero.Location = new System.Drawing.Point(216, 211);
             this.tbNumero.Name = "tbNumero";
             this.tbNumero.Size = new System.Drawing.Size(100, 20);
             this.tbNumero.TabIndex = 49;
@@ -260,7 +262,7 @@
             // lbRua
             // 
             this.lbRua.AutoSize = true;
-            this.lbRua.Location = new System.Drawing.Point(156, 205);
+            this.lbRua.Location = new System.Drawing.Point(14, 211);
             this.lbRua.Name = "lbRua";
             this.lbRua.Size = new System.Drawing.Size(30, 13);
             this.lbRua.TabIndex = 48;
@@ -268,7 +270,7 @@
             // 
             // tbRua
             // 
-            this.tbRua.Location = new System.Drawing.Point(198, 202);
+            this.tbRua.Location = new System.Drawing.Point(56, 208);
             this.tbRua.Name = "tbRua";
             this.tbRua.Size = new System.Drawing.Size(100, 20);
             this.tbRua.TabIndex = 47;
@@ -276,7 +278,7 @@
             // lbCNPJ
             // 
             this.lbCNPJ.AutoSize = true;
-            this.lbCNPJ.Location = new System.Drawing.Point(424, 164);
+            this.lbCNPJ.Location = new System.Drawing.Point(282, 170);
             this.lbCNPJ.Name = "lbCNPJ";
             this.lbCNPJ.Size = new System.Drawing.Size(34, 13);
             this.lbCNPJ.TabIndex = 46;
@@ -285,7 +287,7 @@
             // tbCNPJ
             // 
             this.tbCNPJ.Enabled = false;
-            this.tbCNPJ.Location = new System.Drawing.Point(464, 161);
+            this.tbCNPJ.Location = new System.Drawing.Point(322, 167);
             this.tbCNPJ.Name = "tbCNPJ";
             this.tbCNPJ.Size = new System.Drawing.Size(100, 20);
             this.tbCNPJ.TabIndex = 45;
@@ -294,7 +296,7 @@
             // lbCPF
             // 
             this.lbCPF.AutoSize = true;
-            this.lbCPF.Location = new System.Drawing.Point(268, 164);
+            this.lbCPF.Location = new System.Drawing.Point(126, 170);
             this.lbCPF.Name = "lbCPF";
             this.lbCPF.Size = new System.Drawing.Size(30, 13);
             this.lbCPF.TabIndex = 44;
@@ -302,7 +304,7 @@
             // 
             // tbCPF
             // 
-            this.tbCPF.Location = new System.Drawing.Point(304, 161);
+            this.tbCPF.Location = new System.Drawing.Point(162, 167);
             this.tbCPF.Name = "tbCPF";
             this.tbCPF.Size = new System.Drawing.Size(100, 20);
             this.tbCPF.TabIndex = 43;
@@ -312,7 +314,7 @@
             // lbNascimento
             // 
             this.lbNascimento.AutoSize = true;
-            this.lbNascimento.Location = new System.Drawing.Point(394, 41);
+            this.lbNascimento.Location = new System.Drawing.Point(252, 47);
             this.lbNascimento.Name = "lbNascimento";
             this.lbNascimento.Size = new System.Drawing.Size(105, 13);
             this.lbNascimento.TabIndex = 42;
@@ -320,7 +322,7 @@
             // 
             // tbNascimento
             // 
-            this.tbNascimento.Location = new System.Drawing.Point(533, 38);
+            this.tbNascimento.Location = new System.Drawing.Point(391, 44);
             this.tbNascimento.Name = "tbNascimento";
             this.tbNascimento.Size = new System.Drawing.Size(100, 20);
             this.tbNascimento.TabIndex = 41;
@@ -328,7 +330,7 @@
             // lbCelular
             // 
             this.lbCelular.AutoSize = true;
-            this.lbCelular.Location = new System.Drawing.Point(217, 41);
+            this.lbCelular.Location = new System.Drawing.Point(75, 47);
             this.lbCelular.Name = "lbCelular";
             this.lbCelular.Size = new System.Drawing.Size(42, 13);
             this.lbCelular.TabIndex = 40;
@@ -336,7 +338,7 @@
             // 
             // tbCelular
             // 
-            this.tbCelular.Location = new System.Drawing.Point(271, 38);
+            this.tbCelular.Location = new System.Drawing.Point(129, 44);
             this.tbCelular.Name = "tbCelular";
             this.tbCelular.Size = new System.Drawing.Size(100, 20);
             this.tbCelular.TabIndex = 39;
@@ -345,7 +347,7 @@
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(394, 15);
+            this.lbEmail.Location = new System.Drawing.Point(252, 21);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(35, 13);
             this.lbEmail.TabIndex = 38;
@@ -353,7 +355,7 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(533, 12);
+            this.tbEmail.Location = new System.Drawing.Point(391, 18);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(100, 20);
             this.tbEmail.TabIndex = 37;
@@ -361,7 +363,7 @@
             // lbNome
             // 
             this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(217, 15);
+            this.lbNome.Location = new System.Drawing.Point(75, 21);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(38, 13);
             this.lbNome.TabIndex = 36;
@@ -369,7 +371,7 @@
             // 
             // tbNome
             // 
-            this.tbNome.Location = new System.Drawing.Point(271, 12);
+            this.tbNome.Location = new System.Drawing.Point(129, 18);
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(100, 20);
             this.tbNome.TabIndex = 35;
@@ -384,7 +386,7 @@
             "SETOR B",
             "SETOR C",
             "SETOR D"});
-            this.cmbSetores.Location = new System.Drawing.Point(360, 338);
+            this.cmbSetores.Location = new System.Drawing.Point(218, 344);
             this.cmbSetores.Name = "cmbSetores";
             this.cmbSetores.Size = new System.Drawing.Size(121, 21);
             this.cmbSetores.TabIndex = 70;
@@ -392,17 +394,35 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(272, 341);
+            this.label1.Location = new System.Drawing.Point(130, 347);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 71;
             this.label1.Text = "Setor";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 73;
+            this.label2.Text = "Usuário:";
+            // 
+            // tbUsuario
+            // 
+            this.tbUsuario.Location = new System.Drawing.Point(73, 76);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(100, 20);
+            this.tbUsuario.TabIndex = 72;
+            // 
             // TelaRegistroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(504, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.tbUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbSetores);
             this.Controls.Add(this.tbSenha);
@@ -441,6 +461,7 @@
             this.Controls.Add(this.lbNome);
             this.Controls.Add(this.tbNome);
             this.Name = "TelaRegistroFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro - Funcionarios";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TelaRegistroFuncionario_FormClosed);
             this.Load += new System.EventHandler(this.TelaRegistroFuncionario_Load);
@@ -488,5 +509,7 @@
         private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.ComboBox cmbSetores;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbUsuario;
     }
 }
