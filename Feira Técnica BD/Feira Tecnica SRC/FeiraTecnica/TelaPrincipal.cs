@@ -35,24 +35,21 @@ namespace FeiraTecnica
             listarFunc.Show();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             TelaRegistroFuncionario registroFunc = new TelaRegistroFuncionario(this);
             this.Hide();
-            registroFunc.Show();
+            registroFunc.Show();            
+        }
 
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("Deseja realmente fechar a aplicação?", "Confirmar saída", MessageBoxButtons.YesNo);
 
-            
+            if (resultado == DialogResult.Yes)
+            {
+                Close();
+            }
         }
     }
 }

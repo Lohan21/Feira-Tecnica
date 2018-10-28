@@ -32,14 +32,15 @@ namespace FeiraTecnica
 
         }
 
-        private void telaRegistro_FormClosed(object sender, FormClosedEventArgs e)
+        private void TelaRegistro_FormClosed(object sender, System.Windows.Forms.FormClosedEventArgs e)
         {
             telaL.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            telaL.Show();
+            this.Hide();            
         }
 
         private void btRegistrar_Click(object sender, EventArgs e)

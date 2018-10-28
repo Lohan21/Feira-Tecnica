@@ -165,3 +165,5 @@ C:\Users\logonrmlocal\Downloads\Feira-Tecnica-master\Feira Técnica BD\Feira Tec
 C:\Users\logonrmlocal\Downloads\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.csproj.CopyComplete
 C:\Users\logonrmlocal\Downloads\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.exe
 C:\Users\logonrmlocal\Downloads\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.pdb
+C:\Users\Lohan\Desktop\GitDoLohan\Feira-Tecnica\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\Bunifu_UI_v1.5.4.dll
+C:\Users\Lohan\Desktop\GitDoLohan\Feira-Tecnica\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\Calendar.NET.dll

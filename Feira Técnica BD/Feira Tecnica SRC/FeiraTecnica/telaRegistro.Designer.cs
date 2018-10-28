@@ -28,61 +28,56 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbNome = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaRegistro));
             this.lbNome = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
-            this.tbEmail = new System.Windows.Forms.TextBox();
             this.lbNascimento = new System.Windows.Forms.Label();
             this.lbCelular = new System.Windows.Forms.Label();
-            this.tbCelular = new System.Windows.Forms.TextBox();
             this.lbNumero = new System.Windows.Forms.Label();
-            this.tbNumero = new System.Windows.Forms.TextBox();
             this.lbRua = new System.Windows.Forms.Label();
             this.tbEndereco = new System.Windows.Forms.TextBox();
             this.lbCNPJ = new System.Windows.Forms.Label();
-            this.tbCNPJ = new System.Windows.Forms.TextBox();
             this.lbCPF = new System.Windows.Forms.Label();
-            this.tbCPF = new System.Windows.Forms.TextBox();
             this.lbBairro = new System.Windows.Forms.Label();
             this.tbBairro = new System.Windows.Forms.TextBox();
             this.lbComplemento = new System.Windows.Forms.Label();
             this.tbCidade = new System.Windows.Forms.TextBox();
             this.lbCidade = new System.Windows.Forms.Label();
-            this.tbComplemento = new System.Windows.Forms.TextBox();
-            this.tbCEP = new System.Windows.Forms.TextBox();
             this.lbCEP = new System.Windows.Forms.Label();
             this.tbUF = new System.Windows.Forms.TextBox();
             this.lbUF = new System.Windows.Forms.Label();
             this.rbFisica = new System.Windows.Forms.RadioButton();
             this.rbEmpresarial = new System.Windows.Forms.RadioButton();
-            this.cbMasculino = new System.Windows.Forms.CheckBox();
-            this.cbFeminino = new System.Windows.Forms.CheckBox();
             this.lbSexo = new System.Windows.Forms.Label();
-            this.btRegistrar = new System.Windows.Forms.Button();
-            this.btVoltar = new System.Windows.Forms.Button();
-            this.tbSenha = new System.Windows.Forms.TextBox();
             this.lbSenha = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tbNascimento = new System.Windows.Forms.DateTimePicker();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.splitter2 = new System.Windows.Forms.Splitter();
+            this.cbMasculino = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbFeminino = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbNascimento = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.tbCelular = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.tbNome = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.tbEmail = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.tbCPF = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.tbCNPJ = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.tbCEP = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.tbNumero = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.tbComplemento = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.tbUsuario = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.tbSenha = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.btRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btVoltar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
-            // 
-            // tbNome
-            // 
-            this.tbNome.Location = new System.Drawing.Point(115, 26);
-            this.tbNome.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(239, 29);
-            this.tbNome.TabIndex = 1;
             // 
             // lbNome
             // 
             this.lbNome.AutoSize = true;
-            this.lbNome.Location = new System.Drawing.Point(25, 28);
-            this.lbNome.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbNome.Location = new System.Drawing.Point(24, 28);
+            this.lbNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNome.Name = "lbNome";
             this.lbNome.Size = new System.Drawing.Size(61, 21);
             this.lbNome.TabIndex = 1;
@@ -91,26 +86,18 @@
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(25, 91);
-            this.lbEmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbEmail.Location = new System.Drawing.Point(24, 91);
+            this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmail.Name = "lbEmail";
             this.lbEmail.Size = new System.Drawing.Size(61, 21);
             this.lbEmail.TabIndex = 2;
             this.lbEmail.Text = "Email:";
             // 
-            // tbEmail
-            // 
-            this.tbEmail.Location = new System.Drawing.Point(115, 87);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(239, 29);
-            this.tbEmail.TabIndex = 3;
-            // 
             // lbNascimento
             // 
             this.lbNascimento.AutoSize = true;
-            this.lbNascimento.Location = new System.Drawing.Point(399, 30);
-            this.lbNascimento.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbNascimento.Location = new System.Drawing.Point(399, 29);
+            this.lbNascimento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNascimento.Name = "lbNascimento";
             this.lbNascimento.Size = new System.Drawing.Size(180, 21);
             this.lbNascimento.TabIndex = 7;
@@ -120,45 +107,27 @@
             // 
             this.lbCelular.AutoSize = true;
             this.lbCelular.Location = new System.Drawing.Point(504, 91);
-            this.lbCelular.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbCelular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCelular.Name = "lbCelular";
             this.lbCelular.Size = new System.Drawing.Size(74, 21);
             this.lbCelular.TabIndex = 5;
             this.lbCelular.Text = "Celular:";
             // 
-            // tbCelular
-            // 
-            this.tbCelular.Location = new System.Drawing.Point(631, 89);
-            this.tbCelular.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tbCelular.Name = "tbCelular";
-            this.tbCelular.Size = new System.Drawing.Size(199, 29);
-            this.tbCelular.TabIndex = 5;
-            this.tbCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCelular_KeyPress_1);
-            // 
             // lbNumero
             // 
             this.lbNumero.AutoSize = true;
-            this.lbNumero.Location = new System.Drawing.Point(92, 326);
-            this.lbNumero.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbNumero.Location = new System.Drawing.Point(91, 326);
+            this.lbNumero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNumero.Name = "lbNumero";
             this.lbNumero.Size = new System.Drawing.Size(80, 21);
             this.lbNumero.TabIndex = 15;
             this.lbNumero.Text = "Numero:";
             // 
-            // tbNumero
-            // 
-            this.tbNumero.Location = new System.Drawing.Point(201, 323);
-            this.tbNumero.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tbNumero.Name = "tbNumero";
-            this.tbNumero.Size = new System.Drawing.Size(164, 29);
-            this.tbNumero.TabIndex = 8;
-            this.tbNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNumero_KeyPress);
-            // 
             // lbRua
             // 
             this.lbRua.AutoSize = true;
             this.lbRua.Location = new System.Drawing.Point(80, 424);
-            this.lbRua.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbRua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbRua.Name = "lbRua";
             this.lbRua.Size = new System.Drawing.Size(91, 21);
             this.lbRua.TabIndex = 13;
@@ -167,55 +136,37 @@
             // tbEndereco
             // 
             this.tbEndereco.Location = new System.Drawing.Point(201, 417);
-            this.tbEndereco.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbEndereco.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.tbEndereco.Name = "tbEndereco";
             this.tbEndereco.ReadOnly = true;
-            this.tbEndereco.Size = new System.Drawing.Size(239, 29);
+            this.tbEndereco.Size = new System.Drawing.Size(238, 29);
             this.tbEndereco.TabIndex = 38;
             // 
             // lbCNPJ
             // 
             this.lbCNPJ.AutoSize = true;
-            this.lbCNPJ.Location = new System.Drawing.Point(300, 208);
-            this.lbCNPJ.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbCNPJ.Location = new System.Drawing.Point(300, 209);
+            this.lbCNPJ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCNPJ.Name = "lbCNPJ";
             this.lbCNPJ.Size = new System.Drawing.Size(51, 21);
             this.lbCNPJ.TabIndex = 11;
             this.lbCNPJ.Text = "CNPJ";
             // 
-            // tbCNPJ
-            // 
-            this.tbCNPJ.Location = new System.Drawing.Point(366, 203);
-            this.tbCNPJ.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tbCNPJ.Name = "tbCNPJ";
-            this.tbCNPJ.Size = new System.Drawing.Size(164, 29);
-            this.tbCNPJ.TabIndex = 10;
-            this.tbCNPJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCNPJ_KeyPress);
-            // 
             // lbCPF
             // 
             this.lbCPF.AutoSize = true;
-            this.lbCPF.Location = new System.Drawing.Point(39, 208);
-            this.lbCPF.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbCPF.Location = new System.Drawing.Point(39, 209);
+            this.lbCPF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCPF.Name = "lbCPF";
             this.lbCPF.Size = new System.Drawing.Size(46, 21);
             this.lbCPF.TabIndex = 9;
             this.lbCPF.Text = "CPF:";
             // 
-            // tbCPF
-            // 
-            this.tbCPF.Location = new System.Drawing.Point(100, 203);
-            this.tbCPF.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tbCPF.Name = "tbCPF";
-            this.tbCPF.Size = new System.Drawing.Size(164, 29);
-            this.tbCPF.TabIndex = 6;
-            this.tbCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCPF_KeyPress);
-            // 
             // lbBairro
             // 
             this.lbBairro.AutoSize = true;
-            this.lbBairro.Location = new System.Drawing.Point(103, 471);
-            this.lbBairro.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbBairro.Location = new System.Drawing.Point(102, 470);
+            this.lbBairro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbBairro.Name = "lbBairro";
             this.lbBairro.Size = new System.Drawing.Size(68, 21);
             this.lbBairro.TabIndex = 17;
@@ -224,7 +175,7 @@
             // tbBairro
             // 
             this.tbBairro.Location = new System.Drawing.Point(201, 463);
-            this.tbBairro.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbBairro.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.tbBairro.Name = "tbBairro";
             this.tbBairro.ReadOnly = true;
             this.tbBairro.Size = new System.Drawing.Size(164, 29);
@@ -234,7 +185,7 @@
             // 
             this.lbComplemento.AutoSize = true;
             this.lbComplemento.Location = new System.Drawing.Point(44, 371);
-            this.lbComplemento.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbComplemento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbComplemento.Name = "lbComplemento";
             this.lbComplemento.Size = new System.Drawing.Size(128, 21);
             this.lbComplemento.TabIndex = 19;
@@ -243,7 +194,7 @@
             // tbCidade
             // 
             this.tbCidade.Location = new System.Drawing.Point(201, 511);
-            this.tbCidade.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbCidade.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.tbCidade.Name = "tbCidade";
             this.tbCidade.ReadOnly = true;
             this.tbCidade.Size = new System.Drawing.Size(164, 29);
@@ -252,36 +203,18 @@
             // lbCidade
             // 
             this.lbCidade.AutoSize = true;
-            this.lbCidade.Location = new System.Drawing.Point(100, 519);
-            this.lbCidade.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbCidade.Location = new System.Drawing.Point(100, 518);
+            this.lbCidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCidade.Name = "lbCidade";
             this.lbCidade.Size = new System.Drawing.Size(70, 21);
             this.lbCidade.TabIndex = 21;
             this.lbCidade.Text = "Cidade:";
             // 
-            // tbComplemento
-            // 
-            this.tbComplemento.Location = new System.Drawing.Point(201, 368);
-            this.tbComplemento.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tbComplemento.Name = "tbComplemento";
-            this.tbComplemento.Size = new System.Drawing.Size(164, 29);
-            this.tbComplemento.TabIndex = 9;
-            // 
-            // tbCEP
-            // 
-            this.tbCEP.Location = new System.Drawing.Point(201, 276);
-            this.tbCEP.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tbCEP.Name = "tbCEP";
-            this.tbCEP.Size = new System.Drawing.Size(239, 29);
-            this.tbCEP.TabIndex = 7;
-            this.tbCEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCEP_KeyPress);
-            this.tbCEP.Leave += new System.EventHandler(this.tbCEP_Leave);
-            // 
             // lbCEP
             // 
             this.lbCEP.AutoSize = true;
-            this.lbCEP.Location = new System.Drawing.Point(127, 279);
-            this.lbCEP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbCEP.Location = new System.Drawing.Point(128, 280);
+            this.lbCEP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCEP.Name = "lbCEP";
             this.lbCEP.Size = new System.Drawing.Size(45, 21);
             this.lbCEP.TabIndex = 22;
@@ -290,7 +223,7 @@
             // tbUF
             // 
             this.tbUF.Location = new System.Drawing.Point(201, 559);
-            this.tbUF.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbUF.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.tbUF.Name = "tbUF";
             this.tbUF.ReadOnly = true;
             this.tbUF.Size = new System.Drawing.Size(63, 29);
@@ -299,8 +232,8 @@
             // lbUF
             // 
             this.lbUF.AutoSize = true;
-            this.lbUF.Location = new System.Drawing.Point(136, 565);
-            this.lbUF.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbUF.Location = new System.Drawing.Point(136, 566);
+            this.lbUF.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUF.Name = "lbUF";
             this.lbUF.Size = new System.Drawing.Size(36, 21);
             this.lbUF.TabIndex = 24;
@@ -309,8 +242,8 @@
             // rbFisica
             // 
             this.rbFisica.AutoSize = true;
-            this.rbFisica.Location = new System.Drawing.Point(84, 166);
-            this.rbFisica.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rbFisica.Location = new System.Drawing.Point(84, 167);
+            this.rbFisica.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.rbFisica.Name = "rbFisica";
             this.rbFisica.Size = new System.Drawing.Size(140, 25);
             this.rbFisica.TabIndex = 26;
@@ -321,8 +254,8 @@
             // rbEmpresarial
             // 
             this.rbEmpresarial.AutoSize = true;
-            this.rbEmpresarial.Location = new System.Drawing.Point(288, 166);
-            this.rbEmpresarial.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.rbEmpresarial.Location = new System.Drawing.Point(289, 167);
+            this.rbEmpresarial.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.rbEmpresarial.Name = "rbEmpresarial";
             this.rbEmpresarial.Size = new System.Drawing.Size(192, 25);
             this.rbEmpresarial.TabIndex = 27;
@@ -331,75 +264,21 @@
             this.rbEmpresarial.UseVisualStyleBackColor = true;
             this.rbEmpresarial.Click += new System.EventHandler(this.rbEmpresarial_Click);
             // 
-            // cbMasculino
-            // 
-            this.cbMasculino.AutoSize = true;
-            this.cbMasculino.Location = new System.Drawing.Point(588, 210);
-            this.cbMasculino.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.cbMasculino.Name = "cbMasculino";
-            this.cbMasculino.Size = new System.Drawing.Size(113, 25);
-            this.cbMasculino.TabIndex = 28;
-            this.cbMasculino.Text = "Masculino";
-            this.cbMasculino.UseVisualStyleBackColor = true;
-            this.cbMasculino.Click += new System.EventHandler(this.cbMasculino_Click);
-            // 
-            // cbFeminino
-            // 
-            this.cbFeminino.AutoSize = true;
-            this.cbFeminino.Location = new System.Drawing.Point(777, 210);
-            this.cbFeminino.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.cbFeminino.Name = "cbFeminino";
-            this.cbFeminino.Size = new System.Drawing.Size(105, 25);
-            this.cbFeminino.TabIndex = 29;
-            this.cbFeminino.Text = "Feminino";
-            this.cbFeminino.UseVisualStyleBackColor = true;
-            this.cbFeminino.Click += new System.EventHandler(this.cbFeminino_Click);
-            // 
             // lbSexo
             // 
             this.lbSexo.AutoSize = true;
-            this.lbSexo.Location = new System.Drawing.Point(708, 168);
-            this.lbSexo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbSexo.Location = new System.Drawing.Point(709, 168);
+            this.lbSexo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSexo.Name = "lbSexo";
             this.lbSexo.Size = new System.Drawing.Size(48, 21);
             this.lbSexo.TabIndex = 30;
             this.lbSexo.Text = "Sexo";
             // 
-            // btRegistrar
-            // 
-            this.btRegistrar.Location = new System.Drawing.Point(336, 618);
-            this.btRegistrar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btRegistrar.Name = "btRegistrar";
-            this.btRegistrar.Size = new System.Drawing.Size(125, 37);
-            this.btRegistrar.TabIndex = 12;
-            this.btRegistrar.Text = "Registrar";
-            this.btRegistrar.UseVisualStyleBackColor = true;
-            this.btRegistrar.Click += new System.EventHandler(this.btRegistrar_Click);
-            // 
-            // btVoltar
-            // 
-            this.btVoltar.Location = new System.Drawing.Point(517, 618);
-            this.btVoltar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btVoltar.Name = "btVoltar";
-            this.btVoltar.Size = new System.Drawing.Size(125, 37);
-            this.btVoltar.TabIndex = 32;
-            this.btVoltar.Text = "Voltar";
-            this.btVoltar.UseVisualStyleBackColor = true;
-            this.btVoltar.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // tbSenha
-            // 
-            this.tbSenha.Location = new System.Drawing.Point(687, 452);
-            this.tbSenha.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tbSenha.Name = "tbSenha";
-            this.tbSenha.Size = new System.Drawing.Size(164, 29);
-            this.tbSenha.TabIndex = 11;
-            // 
             // lbSenha
             // 
             this.lbSenha.AutoSize = true;
             this.lbSenha.Location = new System.Drawing.Point(611, 455);
-            this.lbSenha.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lbSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSenha.Name = "lbSenha";
             this.lbSenha.Size = new System.Drawing.Size(66, 21);
             this.lbSenha.TabIndex = 33;
@@ -408,154 +287,473 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(597, 356);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label1.Location = new System.Drawing.Point(598, 356);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 21);
             this.label1.TabIndex = 36;
             this.label1.Text = "Usuário:";
             // 
-            // tbUsuario
-            // 
-            this.tbUsuario.Location = new System.Drawing.Point(687, 351);
-            this.tbUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tbUsuario.MaxLength = 7;
-            this.tbUsuario.Name = "tbUsuario";
-            this.tbUsuario.Size = new System.Drawing.Size(164, 29);
-            this.tbUsuario.TabIndex = 10;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(652, 385);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Location = new System.Drawing.Point(651, 385);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(230, 21);
             this.label2.TabIndex = 37;
             this.label2.Text = "*no máximo 7 caracteres*";
             // 
-            // tbNascimento
-            // 
-            this.tbNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.tbNascimento.Location = new System.Drawing.Point(631, 30);
-            this.tbNascimento.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.tbNascimento.Name = "tbNascimento";
-            this.tbNascimento.Size = new System.Drawing.Size(199, 29);
-            this.tbNascimento.TabIndex = 4;
-            // 
             // splitter1
             // 
             this.splitter1.Location = new System.Drawing.Point(0, 0);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 669);
+            this.splitter1.Size = new System.Drawing.Size(2, 651);
             this.splitter1.TabIndex = 39;
             this.splitter1.TabStop = false;
             // 
             // splitter2
             // 
-            this.splitter2.Location = new System.Drawing.Point(3, 0);
+            this.splitter2.Location = new System.Drawing.Point(2, 0);
+            this.splitter2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(3, 669);
+            this.splitter2.Size = new System.Drawing.Size(2, 651);
             this.splitter2.TabIndex = 40;
             this.splitter2.TabStop = false;
+            // 
+            // cbMasculino
+            // 
+            this.cbMasculino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbMasculino.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbMasculino.Checked = false;
+            this.cbMasculino.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbMasculino.ForeColor = System.Drawing.Color.White;
+            this.cbMasculino.Location = new System.Drawing.Point(631, 211);
+            this.cbMasculino.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.cbMasculino.Name = "cbMasculino";
+            this.cbMasculino.Size = new System.Drawing.Size(20, 20);
+            this.cbMasculino.TabIndex = 41;
+            this.cbMasculino.Click += new System.EventHandler(this.cbMasculino_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(651, 211);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(94, 21);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Masculino";
+            // 
+            // cbFeminino
+            // 
+            this.cbFeminino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbFeminino.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.cbFeminino.Checked = false;
+            this.cbFeminino.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbFeminino.ForeColor = System.Drawing.Color.White;
+            this.cbFeminino.Location = new System.Drawing.Point(769, 211);
+            this.cbFeminino.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.cbFeminino.Name = "cbFeminino";
+            this.cbFeminino.Size = new System.Drawing.Size(20, 20);
+            this.cbFeminino.TabIndex = 43;
+            this.cbFeminino.Click += new System.EventHandler(this.cbFeminino_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(791, 210);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 21);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Feminino";
+            // 
+            // tbNascimento
+            // 
+            this.tbNascimento.BackColor = System.Drawing.Color.SeaGreen;
+            this.tbNascimento.BorderRadius = 0;
+            this.tbNascimento.ForeColor = System.Drawing.Color.White;
+            this.tbNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.tbNascimento.FormatCustom = null;
+            this.tbNascimento.Location = new System.Drawing.Point(631, 32);
+            this.tbNascimento.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.tbNascimento.Name = "tbNascimento";
+            this.tbNascimento.Size = new System.Drawing.Size(231, 35);
+            this.tbNascimento.TabIndex = 45;
+            this.tbNascimento.Value = new System.DateTime(2018, 10, 27, 2, 13, 42, 435);
+            // 
+            // tbCelular
+            // 
+            this.tbCelular.BorderColorFocused = System.Drawing.Color.Blue;
+            this.tbCelular.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbCelular.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.tbCelular.BorderThickness = 3;
+            this.tbCelular.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCelular.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCelular.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tbCelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbCelular.isPassword = false;
+            this.tbCelular.Location = new System.Drawing.Point(631, 87);
+            this.tbCelular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCelular.MaxLength = 32767;
+            this.tbCelular.Name = "tbCelular";
+            this.tbCelular.Size = new System.Drawing.Size(220, 35);
+            this.tbCelular.TabIndex = 46;
+            this.tbCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCelular_KeyPress_1);
+            // 
+            // tbNome
+            // 
+            this.tbNome.BorderColorFocused = System.Drawing.Color.Blue;
+            this.tbNome.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbNome.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.tbNome.BorderThickness = 3;
+            this.tbNome.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbNome.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNome.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tbNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbNome.isPassword = false;
+            this.tbNome.Location = new System.Drawing.Point(114, 22);
+            this.tbNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNome.MaxLength = 32767;
+            this.tbNome.Name = "tbNome";
+            this.tbNome.Size = new System.Drawing.Size(220, 35);
+            this.tbNome.TabIndex = 47;
+            this.tbNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.BorderColorFocused = System.Drawing.Color.Blue;
+            this.tbEmail.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbEmail.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.tbEmail.BorderThickness = 3;
+            this.tbEmail.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbEmail.isPassword = false;
+            this.tbEmail.Location = new System.Drawing.Point(114, 87);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbEmail.MaxLength = 32767;
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Size = new System.Drawing.Size(220, 35);
+            this.tbEmail.TabIndex = 48;
+            this.tbEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // tbCPF
+            // 
+            this.tbCPF.BorderColorFocused = System.Drawing.Color.Blue;
+            this.tbCPF.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbCPF.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.tbCPF.BorderThickness = 3;
+            this.tbCPF.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCPF.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCPF.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tbCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbCPF.isPassword = false;
+            this.tbCPF.Location = new System.Drawing.Point(84, 203);
+            this.tbCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCPF.MaxLength = 32767;
+            this.tbCPF.Name = "tbCPF";
+            this.tbCPF.Size = new System.Drawing.Size(162, 35);
+            this.tbCPF.TabIndex = 49;
+            this.tbCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCPF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCPF_KeyPress);
+            // 
+            // tbCNPJ
+            // 
+            this.tbCNPJ.BorderColorFocused = System.Drawing.Color.Blue;
+            this.tbCNPJ.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbCNPJ.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.tbCNPJ.BorderThickness = 3;
+            this.tbCNPJ.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCNPJ.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCNPJ.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tbCNPJ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbCNPJ.isPassword = false;
+            this.tbCNPJ.Location = new System.Drawing.Point(360, 203);
+            this.tbCNPJ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCNPJ.MaxLength = 32767;
+            this.tbCNPJ.Name = "tbCNPJ";
+            this.tbCNPJ.Size = new System.Drawing.Size(161, 35);
+            this.tbCNPJ.TabIndex = 50;
+            this.tbCNPJ.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCNPJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCNPJ_KeyPress);
+            // 
+            // tbCEP
+            // 
+            this.tbCEP.BorderColorFocused = System.Drawing.Color.Blue;
+            this.tbCEP.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbCEP.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.tbCEP.BorderThickness = 3;
+            this.tbCEP.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCEP.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCEP.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tbCEP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbCEP.isPassword = false;
+            this.tbCEP.Location = new System.Drawing.Point(201, 280);
+            this.tbCEP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCEP.MaxLength = 32767;
+            this.tbCEP.Name = "tbCEP";
+            this.tbCEP.Size = new System.Drawing.Size(161, 35);
+            this.tbCEP.TabIndex = 51;
+            this.tbCEP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCEP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCEP_KeyPress);
+            this.tbCEP.Leave += new System.EventHandler(this.tbCEP_Leave);
+            // 
+            // tbNumero
+            // 
+            this.tbNumero.BorderColorFocused = System.Drawing.Color.Blue;
+            this.tbNumero.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbNumero.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.tbNumero.BorderThickness = 3;
+            this.tbNumero.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbNumero.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNumero.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tbNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbNumero.isPassword = false;
+            this.tbNumero.Location = new System.Drawing.Point(201, 326);
+            this.tbNumero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNumero.MaxLength = 32767;
+            this.tbNumero.Name = "tbNumero";
+            this.tbNumero.Size = new System.Drawing.Size(161, 35);
+            this.tbNumero.TabIndex = 52;
+            this.tbNumero.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNumero_KeyPress);
+            // 
+            // tbComplemento
+            // 
+            this.tbComplemento.BorderColorFocused = System.Drawing.Color.Blue;
+            this.tbComplemento.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbComplemento.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.tbComplemento.BorderThickness = 3;
+            this.tbComplemento.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbComplemento.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbComplemento.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tbComplemento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbComplemento.isPassword = false;
+            this.tbComplemento.Location = new System.Drawing.Point(201, 371);
+            this.tbComplemento.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbComplemento.MaxLength = 32767;
+            this.tbComplemento.Name = "tbComplemento";
+            this.tbComplemento.Size = new System.Drawing.Size(161, 35);
+            this.tbComplemento.TabIndex = 53;
+            this.tbComplemento.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // tbUsuario
+            // 
+            this.tbUsuario.BorderColorFocused = System.Drawing.Color.Blue;
+            this.tbUsuario.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbUsuario.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.tbUsuario.BorderThickness = 3;
+            this.tbUsuario.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbUsuario.isPassword = false;
+            this.tbUsuario.Location = new System.Drawing.Point(686, 350);
+            this.tbUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbUsuario.MaxLength = 7;
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(161, 35);
+            this.tbUsuario.TabIndex = 54;
+            this.tbUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // tbSenha
+            // 
+            this.tbSenha.BorderColorFocused = System.Drawing.Color.Blue;
+            this.tbSenha.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbSenha.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.tbSenha.BorderThickness = 3;
+            this.tbSenha.characterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tbSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbSenha.isPassword = false;
+            this.tbSenha.Location = new System.Drawing.Point(686, 448);
+            this.tbSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSenha.MaxLength = 32767;
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.Size = new System.Drawing.Size(161, 35);
+            this.tbSenha.TabIndex = 55;
+            this.tbSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // btRegistrar
+            // 
+            this.btRegistrar.Active = false;
+            this.btRegistrar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btRegistrar.BorderRadius = 0;
+            this.btRegistrar.ButtonText = "Registrar";
+            this.btRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btRegistrar.DisabledColor = System.Drawing.Color.Gray;
+            this.btRegistrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btRegistrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btRegistrar.Iconimage")));
+            this.btRegistrar.Iconimage_right = null;
+            this.btRegistrar.Iconimage_right_Selected = null;
+            this.btRegistrar.Iconimage_Selected = null;
+            this.btRegistrar.IconMarginLeft = 0;
+            this.btRegistrar.IconMarginRight = 0;
+            this.btRegistrar.IconRightVisible = true;
+            this.btRegistrar.IconRightZoom = 0D;
+            this.btRegistrar.IconVisible = true;
+            this.btRegistrar.IconZoom = 90D;
+            this.btRegistrar.IsTab = false;
+            this.btRegistrar.Location = new System.Drawing.Point(250, 596);
+            this.btRegistrar.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btRegistrar.Name = "btRegistrar";
+            this.btRegistrar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btRegistrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btRegistrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btRegistrar.selected = false;
+            this.btRegistrar.Size = new System.Drawing.Size(240, 49);
+            this.btRegistrar.TabIndex = 56;
+            this.btRegistrar.Text = "Registrar";
+            this.btRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btRegistrar.Textcolor = System.Drawing.Color.White;
+            this.btRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRegistrar.Click += new System.EventHandler(this.btRegistrar_Click);
+            // 
+            // btVoltar
+            // 
+            this.btVoltar.Active = false;
+            this.btVoltar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btVoltar.BorderRadius = 0;
+            this.btVoltar.ButtonText = "Voltar";
+            this.btVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btVoltar.DisabledColor = System.Drawing.Color.Gray;
+            this.btVoltar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btVoltar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btVoltar.Iconimage")));
+            this.btVoltar.Iconimage_right = null;
+            this.btVoltar.Iconimage_right_Selected = null;
+            this.btVoltar.Iconimage_Selected = null;
+            this.btVoltar.IconMarginLeft = 0;
+            this.btVoltar.IconMarginRight = 0;
+            this.btVoltar.IconRightVisible = true;
+            this.btVoltar.IconRightZoom = 0D;
+            this.btVoltar.IconVisible = true;
+            this.btVoltar.IconZoom = 90D;
+            this.btVoltar.IsTab = false;
+            this.btVoltar.Location = new System.Drawing.Point(520, 596);
+            this.btVoltar.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.btVoltar.Name = "btVoltar";
+            this.btVoltar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btVoltar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btVoltar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btVoltar.selected = false;
+            this.btVoltar.Size = new System.Drawing.Size(200, 49);
+            this.btVoltar.TabIndex = 57;
+            this.btVoltar.Text = "Voltar";
+            this.btVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btVoltar.Textcolor = System.Drawing.Color.White;
+            this.btVoltar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVoltar.Click += new System.EventHandler(this.button2_Click);
             // 
             // telaRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(930, 669);
-            this.Controls.Add(this.splitter2);
-            this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.tbNascimento);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbUsuario);
-            this.Controls.Add(this.tbSenha);
-            this.Controls.Add(this.lbSenha);
+            this.ClientSize = new System.Drawing.Size(930, 651);
             this.Controls.Add(this.btVoltar);
             this.Controls.Add(this.btRegistrar);
-            this.Controls.Add(this.lbSexo);
+            this.Controls.Add(this.tbSenha);
+            this.Controls.Add(this.tbUsuario);
+            this.Controls.Add(this.tbComplemento);
+            this.Controls.Add(this.tbNumero);
+            this.Controls.Add(this.tbCEP);
+            this.Controls.Add(this.tbCNPJ);
+            this.Controls.Add(this.tbCPF);
+            this.Controls.Add(this.tbEmail);
+            this.Controls.Add(this.tbNome);
+            this.Controls.Add(this.tbCelular);
+            this.Controls.Add(this.tbNascimento);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.cbFeminino);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.cbMasculino);
+            this.Controls.Add(this.splitter2);
+            this.Controls.Add(this.splitter1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbSenha);
+            this.Controls.Add(this.lbSexo);
             this.Controls.Add(this.rbEmpresarial);
             this.Controls.Add(this.rbFisica);
             this.Controls.Add(this.tbUF);
             this.Controls.Add(this.lbUF);
-            this.Controls.Add(this.tbCEP);
             this.Controls.Add(this.lbCEP);
             this.Controls.Add(this.lbCidade);
-            this.Controls.Add(this.tbComplemento);
             this.Controls.Add(this.lbComplemento);
             this.Controls.Add(this.tbCidade);
             this.Controls.Add(this.lbBairro);
             this.Controls.Add(this.tbBairro);
             this.Controls.Add(this.lbNumero);
-            this.Controls.Add(this.tbNumero);
             this.Controls.Add(this.lbRua);
             this.Controls.Add(this.tbEndereco);
             this.Controls.Add(this.lbCNPJ);
-            this.Controls.Add(this.tbCNPJ);
             this.Controls.Add(this.lbCPF);
-            this.Controls.Add(this.tbCPF);
             this.Controls.Add(this.lbNascimento);
             this.Controls.Add(this.lbCelular);
-            this.Controls.Add(this.tbCelular);
             this.Controls.Add(this.lbEmail);
-            this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.lbNome);
-            this.Controls.Add(this.tbNome);
             this.Font = new System.Drawing.Font("Britannic Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.Name = "telaRegistro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "telaRegistro";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.telaRegistro_FormClosed);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TelaRegistro_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tbNome;
         private System.Windows.Forms.Label lbNome;
         private System.Windows.Forms.Label lbEmail;
-        private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label lbNascimento;
         private System.Windows.Forms.Label lbCelular;
-        private System.Windows.Forms.TextBox tbCelular;
         private System.Windows.Forms.Label lbNumero;
-        private System.Windows.Forms.TextBox tbNumero;
         private System.Windows.Forms.Label lbRua;
         private System.Windows.Forms.TextBox tbEndereco;
         private System.Windows.Forms.Label lbCNPJ;
-        private System.Windows.Forms.TextBox tbCNPJ;
         private System.Windows.Forms.Label lbCPF;
-        private System.Windows.Forms.TextBox tbCPF;
         private System.Windows.Forms.Label lbBairro;
         private System.Windows.Forms.TextBox tbBairro;
         private System.Windows.Forms.Label lbComplemento;
         private System.Windows.Forms.TextBox tbCidade;
         private System.Windows.Forms.Label lbCidade;
-        private System.Windows.Forms.TextBox tbComplemento;
-        private System.Windows.Forms.TextBox tbCEP;
         private System.Windows.Forms.Label lbCEP;
         private System.Windows.Forms.TextBox tbUF;
         private System.Windows.Forms.Label lbUF;
         private System.Windows.Forms.RadioButton rbFisica;
         private System.Windows.Forms.RadioButton rbEmpresarial;
-        private System.Windows.Forms.CheckBox cbMasculino;
-        private System.Windows.Forms.CheckBox cbFeminino;
         private System.Windows.Forms.Label lbSexo;
-        private System.Windows.Forms.Button btRegistrar;
-        private System.Windows.Forms.Button btVoltar;
-        private System.Windows.Forms.TextBox tbSenha;
         private System.Windows.Forms.Label lbSenha;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker tbNascimento;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.Splitter splitter2;
+        private Bunifu.Framework.UI.BunifuCheckbox cbMasculino;
+        private System.Windows.Forms.Label label3;
+        private Bunifu.Framework.UI.BunifuCheckbox cbFeminino;
+        private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuDatepicker tbNascimento;
+        private Bunifu.Framework.UI.BunifuMetroTextbox tbCelular;
+        private Bunifu.Framework.UI.BunifuMetroTextbox tbNome;
+        private Bunifu.Framework.UI.BunifuMetroTextbox tbEmail;
+        private Bunifu.Framework.UI.BunifuMetroTextbox tbCPF;
+        private Bunifu.Framework.UI.BunifuMetroTextbox tbCNPJ;
+        private Bunifu.Framework.UI.BunifuMetroTextbox tbCEP;
+        private Bunifu.Framework.UI.BunifuMetroTextbox tbNumero;
+        private Bunifu.Framework.UI.BunifuMetroTextbox tbComplemento;
+        private Bunifu.Framework.UI.BunifuMetroTextbox tbUsuario;
+        private Bunifu.Framework.UI.BunifuMetroTextbox tbSenha;
+        private Bunifu.Framework.UI.BunifuFlatButton btRegistrar;
+        private Bunifu.Framework.UI.BunifuFlatButton btVoltar;
     }
 }
