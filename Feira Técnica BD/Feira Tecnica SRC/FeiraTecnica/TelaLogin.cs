@@ -27,40 +27,7 @@ namespace FeiraTecnica
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-            int administrador = 1;
-
-            string usuario = tbUsuario.Text;
-            SQLiteCommand Login = new SQLiteCommand("SELECT `usuario`, `senha` FROM `usuario` WHERE `usuario` = '" + tbUsuario.Text + "' AND `senha` = '" + tbSenha.Text + "' AND `administrador` = '"+administrador+"'", conexao);
-            SQLiteDataReader myReader;
-            conexao.Open();
-            myReader = Login.ExecuteReader();
-            int count = 0;
-            while (myReader.Read())
-            {
-
-                count += 1;
-
-            }
-
-            if (count == 1)
-            {
-                
-                TelaPrincipal tela = new TelaPrincipal(this,usuario);
-
-
-                tela.Show();
-                tbUsuario.Clear();
-                tbSenha.Clear();
-                conexao.Close();
-
-                this.Hide();
-
-            }
-            else if (count == 0)
-            {
-                conexao.Close();              
-                Logar();
-            }
+            Logar();
 
         }
 
@@ -91,11 +58,11 @@ namespace FeiraTecnica
                     nome = myReader2["nome"].ToString();
                 }
                 
-                TelaPrincipal tela = new TelaPrincipal(this,nome);
+                TelaPrincipal tela = new TelaPrincipal(this,nome,email);
 
                 tela.Show();
-                tbUsuario.Clear();
-                tbSenha.Clear();
+                tbUsuario.Text = "";
+                tbSenha.Text = "";
                 conexao.Close();
                 this.Hide();
 
@@ -141,6 +108,14 @@ namespace FeiraTecnica
             {
                 Logar();
             }
+        }
+
+        private void lbEsqueceu_Click(object sender, EventArgs e)
+        {
+            MudarSenhaE MudarSE = new MudarSenhaE(this);
+            MudarSE.Show();
+            conexao.Close();
+            this.Hide();
         }
     }
 }

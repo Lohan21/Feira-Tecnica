@@ -77,6 +77,18 @@
     <Compile Include="ListarFuncionarios.Designer.cs">
       <DependentUpon>ListarFuncionarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="MudarSenhaE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MudarSenhaE.Designer.cs">
+      <DependentUpon>MudarSenhaE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MudarSenhas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MudarSenhas.Designer.cs">
+      <DependentUpon>MudarSenhas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TelaLogin.cs">
@@ -106,6 +118,12 @@
     <Compile Include="WebCEP.cs" />
     <EmbeddedResource Include="ListarFuncionarios.resx">
       <DependentUpon>ListarFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MudarSenhaE.resx">
+      <DependentUpon>MudarSenhaE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MudarSenhas.resx">
+      <DependentUpon>MudarSenhas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

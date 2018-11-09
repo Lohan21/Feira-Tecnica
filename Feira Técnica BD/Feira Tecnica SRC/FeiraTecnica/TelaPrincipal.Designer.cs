@@ -34,6 +34,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mudarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +43,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.calendar1 = new Calendar.NET.Calendar();
+            this.btAdicionar = new System.Windows.Forms.Button();
+            this.tbEvento = new System.Windows.Forms.TextBox();
+            this.dtHora = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +79,8 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sairToolStripMenuItem});
+            this.sairToolStripMenuItem,
+            this.mudarSenhaToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(61, 20);
             this.toolStripMenuItem1.Text = "Arquivo";
@@ -82,9 +88,16 @@
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // mudarSenhaToolStripMenuItem
+            // 
+            this.mudarSenhaToolStripMenuItem.Name = "mudarSenhaToolStripMenuItem";
+            this.mudarSenhaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
+            this.mudarSenhaToolStripMenuItem.Text = "Mudar Senha";
+            this.mudarSenhaToolStripMenuItem.Click += new System.EventHandler(this.mudarSenhaToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -163,20 +176,62 @@
             this.calendar1.TabIndex = 3;
             this.calendar1.TodayFont = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             // 
+            // btAdicionar
+            // 
+            this.btAdicionar.Location = new System.Drawing.Point(478, 42);
+            this.btAdicionar.Name = "btAdicionar";
+            this.btAdicionar.Size = new System.Drawing.Size(88, 23);
+            this.btAdicionar.TabIndex = 4;
+            this.btAdicionar.Text = "Adicionar";
+            this.btAdicionar.UseVisualStyleBackColor = true;
+            this.btAdicionar.Click += new System.EventHandler(this.btAdicionar_Click);
+            // 
+            // tbEvento
+            // 
+            this.tbEvento.Location = new System.Drawing.Point(350, 42);
+            this.tbEvento.Name = "tbEvento";
+            this.tbEvento.Size = new System.Drawing.Size(122, 20);
+            this.tbEvento.TabIndex = 5;
+            // 
+            // dtHora
+            // 
+            this.dtHora.CustomFormat = "";
+            this.dtHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtHora.Location = new System.Drawing.Point(264, 16);
+            this.dtHora.Name = "dtHora";
+            this.dtHora.Size = new System.Drawing.Size(302, 20);
+            this.dtHora.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(303, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Evento";
+            // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(578, 540);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dtHora);
+            this.Controls.Add(this.tbEvento);
+            this.Controls.Add(this.btAdicionar);
             this.Controls.Add(this.calendar1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lbUsuario);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "TelaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TelaPrincipal";
+            this.Text = "Agenda";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TelaPrincipal_FormClosed);
+            this.Load += new System.EventHandler(this.TelaPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
@@ -201,5 +256,10 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private Calendar.NET.Calendar calendar1;
+        private System.Windows.Forms.ToolStripMenuItem mudarSenhaToolStripMenuItem;
+        private System.Windows.Forms.Button btAdicionar;
+        private System.Windows.Forms.TextBox tbEvento;
+        private System.Windows.Forms.DateTimePicker dtHora;
+        private System.Windows.Forms.Label label1;
     }
 }

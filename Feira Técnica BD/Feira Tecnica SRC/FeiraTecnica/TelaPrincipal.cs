@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Calendar.NET;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +13,15 @@ namespace FeiraTecnica
 {
     public partial class TelaPrincipal : Form
     {
-        TelaLogin telaL;       
+        TelaLogin telaL;
+        string mail;
 
-        public TelaPrincipal(TelaLogin telaLogin, string nome)
+        public TelaPrincipal(TelaLogin telaLogin, string nome,string email)
         {           
             InitializeComponent();
             lbUsuario.Text = "Olá: "+nome+".";
             telaL = telaLogin;
+            mail = email;
             
         }
 
@@ -50,6 +53,35 @@ namespace FeiraTecnica
             {
                 Close();
             }
+        }
+
+        private void mudarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MudarSenhas MS = new MudarSenhas(this, mail);
+            this.Hide();
+            MS.Show();
+        }
+
+        private void TelaPrincipal_Load(object sender, EventArgs e)
+        {
+            calendar1.CalendarDate = DateTime.Now;
+            calendar1.CalendarView = CalendarViews.Month;
+
+            dtHora.CustomFormat = @"dddd, dd/MM/yyyy -> HH:mm";
+            dtHora.Value = DateTime.Now;
+        }
+
+        private void btAdicionar_Click(object sender, EventArgs e)
+        {
+            var exerciseEvent = new CustomEvent
+            {
+                Date = dtHora.Value,
+                RecurringFrequency = RecurringFrequencies.None,
+                EventText = tbEvento.Text,
+                ReadOnlyEvent = false
+            };
+
+            calendar1.AddEvent(exerciseEvent);
         }
     }
 }

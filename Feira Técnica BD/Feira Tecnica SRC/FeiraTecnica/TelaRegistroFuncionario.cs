@@ -163,11 +163,6 @@ namespace FeiraTecnica
             }
         }
 
-        private void tbCPF_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void tbCPF_KeyPress(object sender, KeyPressEventArgs e)
         {
             checarNumero(e);
