@@ -73,7 +73,7 @@
             this.tbNewSenha1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewSenha1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.tbNewSenha1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbNewSenha1.isPassword = false;
+            this.tbNewSenha1.isPassword = true;
             this.tbNewSenha1.Location = new System.Drawing.Point(108, 51);
             this.tbNewSenha1.Margin = new System.Windows.Forms.Padding(4);
             this.tbNewSenha1.MaxLength = 32767;
@@ -92,7 +92,7 @@
             this.tbNewSenha2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewSenha2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.tbNewSenha2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbNewSenha2.isPassword = false;
+            this.tbNewSenha2.isPassword = true;
             this.tbNewSenha2.Location = new System.Drawing.Point(108, 79);
             this.tbNewSenha2.Margin = new System.Windows.Forms.Padding(4);
             this.tbNewSenha2.MaxLength = 32767;
@@ -100,6 +100,7 @@
             this.tbNewSenha2.Size = new System.Drawing.Size(142, 25);
             this.tbNewSenha2.TabIndex = 14;
             this.tbNewSenha2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbNewSenha2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbNewSenha2_KeyDown);
             // 
             // MudarSenhas
             // 

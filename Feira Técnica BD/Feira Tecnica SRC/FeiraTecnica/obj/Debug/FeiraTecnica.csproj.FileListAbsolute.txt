@@ -13,12 +13,10 @@ C:\Users\Lohan\Desktop\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debu
 C:\Users\Lohan\Desktop\TesteGitLohan\Feira-Tecnica\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\FeiraTecnica.exe.config
 C:\Users\Lohan\Desktop\TesteGitLohan\Feira-Tecnica\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.exe
 C:\Users\Lohan\Desktop\TesteGitLohan\Feira-Tecnica\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.pdb
-C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\feiratecnica.db
 C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\FeiraTecnica.exe.config
 C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\FeiraTecnica.exe
 C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\FeiraTecnica.pdb
 C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.csprojAssemblyReference.cache
-C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.TelaBancoDados.resources
 C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.Properties.Resources.resources
 C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.TelaLogin.resources
 C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.TelaPrincipal.resources
@@ -223,3 +221,12 @@ C:\Users\Lohan\Desktop\Ultimo Feira tecnica pelo neves\Feira-Tecnica-master\Feir
 C:\Users\Lohan\Desktop\Ultimo Feira tecnica pelo neves\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.telaRegistro.resources
 C:\Users\Lohan\Desktop\Ultimo Feira tecnica pelo neves\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.TelaRegistroFuncionario.resources
 C:\Users\Lohan\Desktop\Ultimo Feira tecnica pelo neves\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.csproj.GenerateResource.Cache
+C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\x86\sqlite3.dll
+C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\x64\sqlite3.dll
+C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\bin\Debug\Calendar.NET.dll
+C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.ListarFuncionarios.resources
+C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.MudarSenhaE.resources
+C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.MudarSenhas.resources
+C:\Users\logonrmlocal\Desktop\Feira-Tecnica-master\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.TelaRegistroFuncionario.resources
+C:\Users\Lohan\Desktop\GitDoLohan\Feira-Tecnica\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.MudarSenhaE.resources
+C:\Users\Lohan\Desktop\GitDoLohan\Feira-Tecnica\Feira Técnica BD\Feira Tecnica SRC\FeiraTecnica\obj\Debug\FeiraTecnica.MudarSenhas.resources

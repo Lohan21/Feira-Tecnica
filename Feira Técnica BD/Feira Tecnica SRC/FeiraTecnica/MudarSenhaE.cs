@@ -31,6 +31,11 @@ namespace FeiraTecnica
 
         private void MudarSenha_Click(object sender, EventArgs e)
         {
+            mudarsenhaTotal();
+        }
+
+        private void mudarsenhaTotal()
+        {
             email = tbEmail.Text.ToString();
             senha = tbNewSenha1.Text.ToString();
             if (senha != tbNewSenha2.Text)
@@ -46,7 +51,7 @@ namespace FeiraTecnica
             }
             if (email == null)
             {
-                MessageBox.Show("Por Favor digite um Email", "erro",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                MessageBox.Show("Por Favor digite um Email", "erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             conexao.Open();
             SQLiteCommand mudarSenha = new SQLiteCommand("SELECT `tipo` FROM `usuario` WHERE `email` = '" + email + "'", conexao);
@@ -68,13 +73,13 @@ namespace FeiraTecnica
                 ativo = myReader["ativo"].ToString();
 
             }
-            MessageBox.Show(ativo);
+
             if (ativo != "True")
             {
                 MessageBox.Show("email invalido!", "erro!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            SQLiteCommand mudarSenhaUsuario = new SQLiteCommand("UPDATE `usuario` SET `senha` = '" + senha + "' WHERE `email` = '" + email + "'",conexao);
+            SQLiteCommand mudarSenhaUsuario = new SQLiteCommand("UPDATE `usuario` SET `senha` = '" + senha + "' WHERE `email` = '" + email + "'", conexao);
             mudarSenhaUsuario.ExecuteNonQuery();
             if (tipo == "true")
             {
@@ -86,6 +91,7 @@ namespace FeiraTecnica
             }
             conexao.Close();
             MessageBox.Show("Senha mudada com sucesso", "SUCESSO!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            this.Close();
         }
 
         private void mudarSenhafunc()
@@ -103,6 +109,16 @@ namespace FeiraTecnica
             conexao.Close();
             telaL.Show();
             
+        }
+
+        private void tbNewSenha2_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tbNewSenha2_KeyDown(object sender, KeyEventArgs e)
+        {
+            mudarsenhaTotal();
         }
     }
 }

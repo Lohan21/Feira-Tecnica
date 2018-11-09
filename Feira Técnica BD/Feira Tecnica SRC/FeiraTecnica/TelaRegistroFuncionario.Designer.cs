@@ -277,10 +277,9 @@
             this.cmbSetores.FormattingEnabled = true;
             this.cmbSetores.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cmbSetores.Items.AddRange(new object[] {
-            "SETOR A",
-            "SETOR B",
-            "SETOR C",
-            "SETOR D"});
+            "HTML",
+            "Banco de Dados",
+            "C#"});
             this.cmbSetores.Location = new System.Drawing.Point(218, 344);
             this.cmbSetores.Name = "cmbSetores";
             this.cmbSetores.Size = new System.Drawing.Size(121, 21);

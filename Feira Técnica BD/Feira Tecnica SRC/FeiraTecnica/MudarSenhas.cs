@@ -90,12 +90,21 @@ namespace FeiraTecnica
                 conexao.Close();
             }
             MessageBox.Show("Senha Mudada com sucesso!","Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            this.Close();
         }
 
         private void MudarSenhas_FormClosed(object sender, FormClosedEventArgs e)
         {
             conexao.Close();
             telaP.Show();
+        }
+
+        private void tbNewSenha2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                MudarSenhaCommand();
+            }
         }
     }
 }

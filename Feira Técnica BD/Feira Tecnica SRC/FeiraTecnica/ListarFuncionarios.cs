@@ -144,7 +144,6 @@ namespace FeiraTecnica
                 SQLiteCommand apagarUsuario = new SQLiteCommand("UPDATE `usuario` SET `ativo` = '" + 0 + "' WHERE `email` = '" + email + "'", conexao);
                 apagarUsuario.ExecuteNonQuery();
                 conexao.Close();
-                MessageBox.Show(email);
                 AtualizarCliente();
                
             }

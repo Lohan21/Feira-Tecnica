@@ -23,6 +23,7 @@ namespace FeiraTecnica
             database = @"..\..\..\..\db sqlite\feiratecnica.db";
 #endif
             conexao = new SQLiteConnection("Data Source=" + database + ";Version=3;");
+            tbUsuario.Focus();
         }
 
         private void btLogin_Click(object sender, EventArgs e)
@@ -61,6 +62,7 @@ namespace FeiraTecnica
                 TelaPrincipal tela = new TelaPrincipal(this,nome,email);
 
                 tela.Show();
+                tbUsuario.Focus();
                 tbUsuario.Text = "";
                 tbSenha.Text = "";
                 conexao.Close();
@@ -87,7 +89,9 @@ namespace FeiraTecnica
 
         private void btRegistrar_Click(object sender, EventArgs e)
         {
-           
+            tbUsuario.Focus();
+            tbUsuario.Text = "";
+            tbSenha.Text = "";
             telaRegistro telaRegistro = new telaRegistro(this);
             telaRegistro.Show();
             conexao.Close();
@@ -112,6 +116,9 @@ namespace FeiraTecnica
 
         private void lbEsqueceu_Click(object sender, EventArgs e)
         {
+            tbUsuario.Focus();
+            tbUsuario.Text = "";
+            tbSenha.Text = "";
             MudarSenhaE MudarSE = new MudarSenhaE(this);
             MudarSE.Show();
             conexao.Close();
