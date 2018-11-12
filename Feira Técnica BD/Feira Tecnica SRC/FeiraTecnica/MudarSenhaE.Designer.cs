@@ -130,6 +130,7 @@
             this.tbNewSenha2.Size = new System.Drawing.Size(142, 25);
             this.tbNewSenha2.TabIndex = 14;
             this.tbNewSenha2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbNewSenha2.OnValueChanged += new System.EventHandler(this.tbNewSenha2_OnValueChanged);
             this.tbNewSenha2.Enter += new System.EventHandler(this.tbNewSenha2_Enter);
             this.tbNewSenha2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbNewSenha2_KeyDown);
             // 

@@ -15,14 +15,17 @@ namespace FeiraTecnica
     {
         TelaPrincipal telaP;
         string email;
-        string database = @"..\..\..\..\db sqlite\feiratecnica.db";
+        string database = "feiratecnica.db";      
         SQLiteConnection conexao = new SQLiteConnection();
         public ListarFuncionarios(TelaPrincipal telaPrincipal)
         {
             InitializeComponent();
+#if DEBUG
+            database = @"..\..\..\..\db sqlite\feiratecnica.db";
+#endif
             telaP = telaPrincipal;
             conexao = new SQLiteConnection("Data Source=" + database + ";Version=3;");
-            comboBox1.SelectedIndex = 0;
+            comboBox1.SelectedIndex = 1;
         }
 
         private void ListarFuncionarios_Load(object sender, EventArgs e)
@@ -126,37 +129,50 @@ namespace FeiraTecnica
 
         private void apagarRegistroCliente()
         {
-            int id;
-            if (dtFuncionarios.SelectedRows[0].Cells[0] != null)
+            try
             {
-                conexao.Open();
-                id = Convert.ToInt32(dtFuncionarios.SelectedRows[0].Cells[0].Value.ToString());
-                string mudarCliente = "UPDATE `clientes` SET `ativo` = '" + 0 + "' WHERE `id` = '" + id + "'";
-                SQLiteCommand ComandoDeletarCliente = new SQLiteCommand(mudarCliente, conexao);               
-                ComandoDeletarCliente.ExecuteNonQuery();
-                SQLiteCommand checar = new SQLiteCommand("SELECT `email` FROM `clientes` WHERE `id` = '" + id + "'", conexao);
-                SQLiteDataReader myReader;
-                myReader = checar.ExecuteReader();
-                while (myReader.Read())
+                DataGridViewRow linhaSelecionada = dtFuncionarios.CurrentRow;
+
+                int id;
+                if (linhaSelecionada != null)
                 {
-                    email = myReader["email"].ToString();
+                    conexao.Open();
+                    id = int.Parse(linhaSelecionada.Cells[0].Value.ToString());
+                    string mudarCliente = "UPDATE `clientes` SET `ativo` = '" + 0 + "' WHERE `id` = '" + id + "'";
+                    SQLiteCommand ComandoDeletarCliente = new SQLiteCommand(mudarCliente, conexao);
+                    ComandoDeletarCliente.ExecuteNonQuery();
+                    SQLiteCommand checar = new SQLiteCommand("SELECT `email` FROM `clientes` WHERE `id` = '" + id + "'", conexao);
+                    SQLiteDataReader myReader;
+                    myReader = checar.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        email = myReader["email"].ToString();
+                    }
+                    SQLiteCommand apagarUsuario = new SQLiteCommand("UPDATE `usuario` SET `ativo` = '" + 0 + "' WHERE `email` = '" + email + "'", conexao);
+                    apagarUsuario.ExecuteNonQuery();
+                    conexao.Close();
+                    AtualizarCliente();
+
                 }
-                SQLiteCommand apagarUsuario = new SQLiteCommand("UPDATE `usuario` SET `ativo` = '" + 0 + "' WHERE `email` = '" + email + "'", conexao);
-                apagarUsuario.ExecuteNonQuery();
-                conexao.Close();
-                AtualizarCliente();
-               
             }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Selecione a LINHA do registro que deseja apagar.", "erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
            
         }
 
         private void demitir()
         {
+            DataGridViewRow linhaSelecionada = dtFuncionarios.CurrentRow;
+
             int id;
-            if (dtFuncionarios.SelectedRows[0].Cells[0] != null)
+            if (linhaSelecionada != null)
             {
                 conexao.Open();
-                id = Convert.ToInt32(dtFuncionarios.SelectedRows[0].Cells[0].Value.ToString());
+                id = int.Parse(linhaSelecionada.Cells[0].Value.ToString());
                 string mudarFunc = "UPDATE `funcionarios` SET `demitido` = '" + 1 + "' WHERE `id` = '" + id + "'";
                 SQLiteCommand ComandoMudarSenhaFunc = new SQLiteCommand(mudarFunc, conexao);
                 ComandoMudarSenhaFunc.ExecuteNonQuery();

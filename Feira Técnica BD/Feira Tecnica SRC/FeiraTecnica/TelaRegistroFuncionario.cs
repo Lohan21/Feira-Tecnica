@@ -36,12 +36,11 @@ namespace FeiraTecnica
         {
             try
             {
-                conexao.Open();
-                string nome, Email, DataN, Rua, Bairro, Cidade, Complemento, Senha, UF, usuario;
-                int celular, Numero, CEP, setor;
+                string nome, Email, Rua, Bairro, Cidade, Complemento, Senha, UF, usuario, celular, CEP;
+                DateTime DataN;
+                int Numero, setor;
                 bool sexo;
                 sexo = true;
-
 
                 if (cbMasculino.Checked)
                 {
@@ -52,16 +51,13 @@ namespace FeiraTecnica
                 {
 
                     sexo = false;
-                }
-
-
-              
+                }              
 
                 nome = tbNome.Text.ToString();
                 usuario = tbUsuario.Text.ToString();
                 Email = tbEmail.Text.ToString();
-                DataN = tbNascimento.Text.ToString();
-                Rua = tbRua.Text.ToString();
+                DataN = tbNascimento.Value;
+                Rua = tbEndereco.Text.ToString();
                 Bairro = tbBairro.Text.ToString();
                 Cidade = tbCidade.Text.ToString();
                 Complemento = tbComplemento.Text.ToString();
@@ -69,9 +65,8 @@ namespace FeiraTecnica
                 UF = tbUF.Text.ToString();
                 Boolean cliente = false, administrador = false;
 
+                celular = tbCelular.Text;
 
-
-                celular = Convert.ToInt32(tbCelular.Text);
                 setor = 1;
                 if (cmbSetores.SelectedIndex==0)
                 {
@@ -90,25 +85,33 @@ namespace FeiraTecnica
                     setor = 4;
                 }
 
-
                 Numero = Convert.ToInt32(tbNumero.Text);
-                CEP = Convert.ToInt32(tbCEP.Text);
+                CEP = tbCEP.Text;
                 if ((cbMasculino.Checked == false) && (cbFeminino.Checked == false))
                 {
                     MessageBox.Show("erro no registro, selecione seu sexo", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                string criarRegistroPessoa = "INSERT INTO `funcionarios` (`nome`,`email`,`celular`,`data_nascimento`,`senha`,`cpf`,`cnpj`,`sexo`,`codigo_cargo`,`rua`,`numero_casa`,`complemento_endereco`,`bairro`,`cep`,`cidade`,`uf`,`setor_id`) VALUES ('" + nome + "','" + Email + "','" + celular + "','" + DataN + "','" + Senha + "','" + tbCPF.Text + "','" + tbCNPJ.Text + "','" + sexo + "','" + null + "','" + Rua + "','" + Numero + "','" + Complemento + "','" + Bairro + "','" + CEP + "','" + Cidade + "','" + UF + "','" + setor + "');";
-                string criarRegistroUsuario = "INSERT INTO `usuario` (`usuario`,`senha`,`tipo`,`administrador`) VALUES ('" + usuario + "','" + Senha + "','" + cliente + "','" + administrador + "');";
-                SQLiteCommand comandoCriarRegistroPessoa = new SQLiteCommand(criarRegistroPessoa, conexao);
-                SQLiteCommand ComandoCriarRegistroUsuario = new SQLiteCommand(criarRegistroUsuario, conexao);
-                comandoCriarRegistroPessoa.ExecuteNonQuery();
-                ComandoCriarRegistroUsuario.ExecuteNonQuery();
-                MessageBox.Show("Registro feito com sucesso!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                conexao.Close();
+                if (UsuarioValido(usuario))
+                {
+                    try
+                    {
+                        SalvarNoBanco(celular, nome, Email, Rua, Bairro, Cidade, Complemento, Senha, UF, CEP, usuario, DataN, Numero, sexo, cliente, administrador, setor);
 
-
+                        MessageBox.Show("Registro feito com sucesso!", "Funcionário", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        btVoltar_Click(null, null);
+                    }
+                    catch (Exception exception)
+                    {
+                        Console.WriteLine(exception);
+                        MessageBox.Show(exception.InnerException.ToString(), "erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Usuário já registrado!", "Funcionário", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
             catch (Exception exception)
             {
@@ -116,6 +119,38 @@ namespace FeiraTecnica
                 MessageBox.Show("preencha todos os valores corretamente para se registrar!", "erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
+        }
+
+        private void SalvarNoBanco(string celular, string nome, string Email, string Rua, string Bairro, string Cidade, string Complemento, string Senha, string UF, string CEP, string usuario, DateTime DataN, int Numero, bool sexo, bool cliente, bool administrador, int setor)
+        {
+            conexao = new SQLiteConnection("Data Source=" + database + ";Version=3;");
+            conexao.Open();
+            string criarRegistroPessoa = "INSERT INTO `funcionarios` (`nome`,`email`,`celular`,`data_nascimento`,`senha`,`cpf`,`cnpj`,`sexo`,`codigo_cargo`,`rua`,`numero_casa`,`complemento_endereco`,`bairro`,`cep`,`cidade`,`uf`,`setor_id`) VALUES ('" + nome + "','" + Email + "','" + celular + "','" + DataN + "','" + Senha + "','" + tbCPF.Text + "','" + tbCNPJ.Text + "','" + sexo + "','" + null + "','" + Rua + "','" + Numero + "','" + Complemento + "','" + Bairro + "','" + CEP + "','" + Cidade + "','" + UF + "','" + setor + "');";
+            string criarRegistroUsuario = "INSERT INTO `usuario` (`usuario`,`senha`,`tipo`,`administrador`,`email`) VALUES ('" + usuario + "','" + Senha + "','" + cliente + "','" + administrador + "','" + Email + "');";
+            SQLiteCommand comandoCriarRegistroPessoa = new SQLiteCommand(criarRegistroPessoa, conexao);
+            SQLiteCommand comandoCriarRegistroUsuario = new SQLiteCommand(criarRegistroUsuario, conexao);
+            comandoCriarRegistroPessoa.ExecuteNonQuery();
+            comandoCriarRegistroUsuario.ExecuteNonQuery();
+            conexao.Close();
+        }
+
+        private bool UsuarioValido(string usuario)
+        {
+            bool retorno = true;
+
+            conexao = new SQLiteConnection("Data Source=" + database + ";Version=3;");
+            conexao.Open();
+
+            SQLiteCommand consulta = new SQLiteCommand("SELECT `usuario` FROM `usuario` WHERE `usuario` = '" + usuario + "'", conexao);
+            SQLiteDataReader myReader = consulta.ExecuteReader();
+
+            while (myReader.Read())
+            {
+                retorno = false;
+            }
+            conexao.Close();
+
+            return retorno;
         }
 
         private void btVoltar_Click(object sender, EventArgs e)
@@ -193,6 +228,15 @@ namespace FeiraTecnica
         {
             cbMasculino.Checked = false;
             cbFeminino.Checked = true;
+        }
+
+        private void tbCEP_Leave(object sender, EventArgs e)
+        {
+            WebCEP webCep = new WebCEP(tbCEP.Text);
+            tbEndereco.Text = webCep.TipoLogradouro + " " + webCep.Logradouro;
+            tbBairro.Text = webCep.Bairro;
+            tbUF.Text = webCep.UF;
+            tbCidade.Text = webCep.Cidade;
         }
     }
 }

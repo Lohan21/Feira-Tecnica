@@ -14,6 +14,7 @@ namespace FeiraTecnica
     public partial class TelaLogin : Form
     {
         string database = "feiratecnica.db";
+        string tipo;
 
         SQLiteConnection conexao = new SQLiteConnection();
         public TelaLogin()
@@ -36,6 +37,7 @@ namespace FeiraTecnica
         {
             string email = "";
             SQLiteCommand Login = new SQLiteCommand("SELECT `email` FROM `usuario` WHERE `usuario` = '" + tbUsuario.Text + "' AND `senha` = '" + tbSenha.Text + "'", conexao);
+            SQLiteCommand checar = new SQLiteCommand("SELECT `tipo` FROM `usuario` WHERE `usuario` = '" + tbUsuario.Text + "'",conexao);          
             SQLiteDataReader myReader;
             conexao.Open();
             myReader = Login.ExecuteReader();
@@ -50,14 +52,43 @@ namespace FeiraTecnica
             if (count == 1)
             {
                 string nome = "";
-                SQLiteCommand cliente = new SQLiteCommand("SELECT `nome` FROM `clientes` WHERE `email` = '" + email + "'", conexao);
-                SQLiteDataReader myReader2;
-                myReader2 = cliente.ExecuteReader();
-
-                while (myReader2.Read())
+                myReader = checar.ExecuteReader();
+                while (myReader.Read())
                 {
-                    nome = myReader2["nome"].ToString();
+                    tipo = myReader["tipo"].ToString();
+                    count += 1;
+
                 }
+                if (tipo == "True")
+                {
+                    SQLiteCommand cliente = new SQLiteCommand("SELECT `nome` FROM `clientes` WHERE `email` = '" + email + "'", conexao);
+                    SQLiteDataReader myReader2;
+                    myReader2 = cliente.ExecuteReader();
+
+                    while (myReader2.Read())
+                    {
+                        nome = myReader2["nome"].ToString();
+                    }
+                    
+                }
+                
+
+
+
+
+                if (tipo == "False")
+                {
+                    SQLiteCommand func = new SQLiteCommand("SELECT `nome` FROM `funcionarios` WHERE `email` = '" + email + "'", conexao);
+                    SQLiteDataReader myReader3;
+                    myReader3 = func.ExecuteReader();
+                    while (myReader3.Read())
+                    {
+                        nome = myReader3["nome"].ToString();
+                    }
+                    
+                }
+                    
+                
                 
                 TelaPrincipal tela = new TelaPrincipal(this,nome,email);
 

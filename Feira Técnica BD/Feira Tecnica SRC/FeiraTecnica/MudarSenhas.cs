@@ -89,7 +89,7 @@ namespace FeiraTecnica
                 ComandomudarsenhaFuncionario.ExecuteNonQuery();
                 conexao.Close();
             }
-            MessageBox.Show("Senha Mudada com sucesso!","Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show("Senha alterada com sucesso!","Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             this.Close();
         }
 
@@ -105,6 +105,11 @@ namespace FeiraTecnica
             {
                 MudarSenhaCommand();
             }
+        }
+
+        private void tbNewSenha2_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

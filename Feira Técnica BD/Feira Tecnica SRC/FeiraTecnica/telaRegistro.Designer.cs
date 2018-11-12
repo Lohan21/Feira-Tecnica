@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(telaRegistro));
             this.lbNome = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbNascimento = new System.Windows.Forms.Label();
@@ -69,8 +68,8 @@
             this.tbComplemento = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.tbUsuario = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.tbSenha = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.btRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btVoltar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btRegistrar = new System.Windows.Forms.Button();
+            this.btVoltar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbNome
@@ -324,7 +323,7 @@
             // 
             // cbMasculino
             // 
-            this.cbMasculino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbMasculino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbMasculino.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbMasculino.Checked = false;
             this.cbMasculino.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
@@ -348,13 +347,13 @@
             // 
             // cbFeminino
             // 
-            this.cbFeminino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
+            this.cbFeminino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbFeminino.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbFeminino.Checked = false;
             this.cbFeminino.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.cbFeminino.ForeColor = System.Drawing.Color.White;
             this.cbFeminino.Location = new System.Drawing.Point(461, 131);
-            this.cbFeminino.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.cbFeminino.Margin = new System.Windows.Forms.Padding(5);
             this.cbFeminino.Name = "cbFeminino";
             this.cbFeminino.Size = new System.Drawing.Size(20, 20);
             this.cbFeminino.TabIndex = 43;
@@ -372,7 +371,7 @@
             // 
             // tbNascimento
             // 
-            this.tbNascimento.BackColor = System.Drawing.Color.SeaGreen;
+            this.tbNascimento.BackColor = System.Drawing.Color.SteelBlue;
             this.tbNascimento.BorderRadius = 0;
             this.tbNascimento.ForeColor = System.Drawing.Color.White;
             this.tbNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -396,7 +395,7 @@
             this.tbCelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbCelular.isPassword = false;
             this.tbCelular.Location = new System.Drawing.Point(379, 51);
-            this.tbCelular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCelular.Margin = new System.Windows.Forms.Padding(2);
             this.tbCelular.MaxLength = 32767;
             this.tbCelular.Name = "tbCelular";
             this.tbCelular.Size = new System.Drawing.Size(132, 25);
@@ -416,7 +415,7 @@
             this.tbNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbNome.isPassword = false;
             this.tbNome.Location = new System.Drawing.Point(68, 14);
-            this.tbNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNome.Margin = new System.Windows.Forms.Padding(2);
             this.tbNome.MaxLength = 32767;
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(132, 25);
@@ -435,7 +434,7 @@
             this.tbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbEmail.isPassword = false;
             this.tbEmail.Location = new System.Drawing.Point(68, 54);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbEmail.MaxLength = 32767;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(132, 25);
@@ -454,7 +453,7 @@
             this.tbCPF.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbCPF.isPassword = false;
             this.tbCPF.Location = new System.Drawing.Point(52, 122);
-            this.tbCPF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCPF.Margin = new System.Windows.Forms.Padding(2);
             this.tbCPF.MaxLength = 32767;
             this.tbCPF.Name = "tbCPF";
             this.tbCPF.Size = new System.Drawing.Size(97, 25);
@@ -474,7 +473,7 @@
             this.tbCNPJ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbCNPJ.isPassword = false;
             this.tbCNPJ.Location = new System.Drawing.Point(219, 123);
-            this.tbCNPJ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCNPJ.Margin = new System.Windows.Forms.Padding(2);
             this.tbCNPJ.MaxLength = 32767;
             this.tbCNPJ.Name = "tbCNPJ";
             this.tbCNPJ.Size = new System.Drawing.Size(97, 25);
@@ -494,7 +493,7 @@
             this.tbCEP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbCEP.isPassword = false;
             this.tbCEP.Location = new System.Drawing.Point(121, 168);
-            this.tbCEP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCEP.Margin = new System.Windows.Forms.Padding(2);
             this.tbCEP.MaxLength = 32767;
             this.tbCEP.Name = "tbCEP";
             this.tbCEP.Size = new System.Drawing.Size(97, 25);
@@ -515,7 +514,7 @@
             this.tbNumero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbNumero.isPassword = false;
             this.tbNumero.Location = new System.Drawing.Point(121, 198);
-            this.tbNumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbNumero.Margin = new System.Windows.Forms.Padding(2);
             this.tbNumero.MaxLength = 32767;
             this.tbNumero.Name = "tbNumero";
             this.tbNumero.Size = new System.Drawing.Size(97, 25);
@@ -535,7 +534,7 @@
             this.tbComplemento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbComplemento.isPassword = false;
             this.tbComplemento.Location = new System.Drawing.Point(121, 227);
-            this.tbComplemento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbComplemento.Margin = new System.Windows.Forms.Padding(2);
             this.tbComplemento.MaxLength = 32767;
             this.tbComplemento.Name = "tbComplemento";
             this.tbComplemento.Size = new System.Drawing.Size(97, 25);
@@ -554,7 +553,7 @@
             this.tbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbUsuario.isPassword = false;
             this.tbUsuario.Location = new System.Drawing.Point(412, 215);
-            this.tbUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.tbUsuario.MaxLength = 7;
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(97, 25);
@@ -573,7 +572,7 @@
             this.tbSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbSenha.isPassword = false;
             this.tbSenha.Location = new System.Drawing.Point(412, 275);
-            this.tbSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSenha.Margin = new System.Windows.Forms.Padding(2);
             this.tbSenha.MaxLength = 32767;
             this.tbSenha.Name = "tbSenha";
             this.tbSenha.Size = new System.Drawing.Size(97, 25);
@@ -582,76 +581,22 @@
             // 
             // btRegistrar
             // 
-            this.btRegistrar.Active = false;
-            this.btRegistrar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btRegistrar.BorderRadius = 0;
-            this.btRegistrar.ButtonText = "Registrar";
-            this.btRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btRegistrar.DisabledColor = System.Drawing.Color.Gray;
-            this.btRegistrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btRegistrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btRegistrar.Iconimage")));
-            this.btRegistrar.Iconimage_right = null;
-            this.btRegistrar.Iconimage_right_Selected = null;
-            this.btRegistrar.Iconimage_Selected = null;
-            this.btRegistrar.IconMarginLeft = 0;
-            this.btRegistrar.IconMarginRight = 0;
-            this.btRegistrar.IconRightVisible = true;
-            this.btRegistrar.IconRightZoom = 0D;
-            this.btRegistrar.IconVisible = true;
-            this.btRegistrar.IconZoom = 90D;
-            this.btRegistrar.IsTab = false;
-            this.btRegistrar.Location = new System.Drawing.Point(150, 369);
-            this.btRegistrar.Margin = new System.Windows.Forms.Padding(2, 4, 2, 4);
+            this.btRegistrar.Location = new System.Drawing.Point(190, 371);
             this.btRegistrar.Name = "btRegistrar";
-            this.btRegistrar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btRegistrar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btRegistrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btRegistrar.selected = false;
-            this.btRegistrar.Size = new System.Drawing.Size(144, 30);
-            this.btRegistrar.TabIndex = 56;
+            this.btRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btRegistrar.TabIndex = 58;
             this.btRegistrar.Text = "Registrar";
-            this.btRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btRegistrar.Textcolor = System.Drawing.Color.White;
-            this.btRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btRegistrar.UseVisualStyleBackColor = true;
             this.btRegistrar.Click += new System.EventHandler(this.btRegistrar_Click);
             // 
             // btVoltar
             // 
-            this.btVoltar.Active = false;
-            this.btVoltar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btVoltar.BorderRadius = 0;
-            this.btVoltar.ButtonText = "Voltar";
-            this.btVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btVoltar.DisabledColor = System.Drawing.Color.Gray;
-            this.btVoltar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btVoltar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btVoltar.Iconimage")));
-            this.btVoltar.Iconimage_right = null;
-            this.btVoltar.Iconimage_right_Selected = null;
-            this.btVoltar.Iconimage_Selected = null;
-            this.btVoltar.IconMarginLeft = 0;
-            this.btVoltar.IconMarginRight = 0;
-            this.btVoltar.IconRightVisible = true;
-            this.btVoltar.IconRightZoom = 0D;
-            this.btVoltar.IconVisible = true;
-            this.btVoltar.IconZoom = 90D;
-            this.btVoltar.IsTab = false;
-            this.btVoltar.Location = new System.Drawing.Point(312, 369);
-            this.btVoltar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btVoltar.Location = new System.Drawing.Point(332, 372);
             this.btVoltar.Name = "btVoltar";
-            this.btVoltar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btVoltar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btVoltar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btVoltar.selected = false;
-            this.btVoltar.Size = new System.Drawing.Size(120, 30);
-            this.btVoltar.TabIndex = 57;
+            this.btVoltar.Size = new System.Drawing.Size(75, 23);
+            this.btVoltar.TabIndex = 59;
             this.btVoltar.Text = "Voltar";
-            this.btVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btVoltar.Textcolor = System.Drawing.Color.White;
-            this.btVoltar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVoltar.UseVisualStyleBackColor = true;
             this.btVoltar.Click += new System.EventHandler(this.button2_Click);
             // 
             // telaRegistro
@@ -755,7 +700,7 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox tbComplemento;
         private Bunifu.Framework.UI.BunifuMetroTextbox tbUsuario;
         private Bunifu.Framework.UI.BunifuMetroTextbox tbSenha;
-        private Bunifu.Framework.UI.BunifuFlatButton btRegistrar;
-        private Bunifu.Framework.UI.BunifuFlatButton btVoltar;
+        private System.Windows.Forms.Button btRegistrar;
+        private System.Windows.Forms.Button btVoltar;
     }
 }

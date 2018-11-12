@@ -122,10 +122,5 @@ namespace FeiraTecnica
 
             calendar1.AddEvent(exerciseEvent);
         }              
-
-        private void TelaPrincipal_Leave(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

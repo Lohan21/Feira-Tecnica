@@ -94,22 +94,29 @@ namespace FeiraTecnica
 
                 if (EmailEhValido(Email))
                 {
-                    try
+                    if (UsuarioValido(usuario))
                     {
-                        SalvarNoBanco(celular, nome, Email, Rua, Bairro, Cidade, Complemento, Senha, UF, CEP, usuario, DataN, Numero, sexo, cliente, administrador);
+                        try
+                        {
+                            SalvarNoBanco(celular, nome, Email, Rua, Bairro, Cidade, Complemento, Senha, UF, CEP, usuario, DataN, Numero, sexo, cliente, administrador);
 
-                        MessageBox.Show("Registro feito com sucesso!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        button2_Click(null, null);
+                            MessageBox.Show("Registro feito com sucesso!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                            button2_Click(null, null);
+                        }
+                        catch (Exception exception)
+                        {
+                            Console.WriteLine(exception);
+                            MessageBox.Show(exception.InnerException.ToString(), "erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
-                    catch (Exception exception)
+                    else
                     {
-                        Console.WriteLine(exception);
-                        MessageBox.Show(exception.InnerException.ToString(), "erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Usuário já registrado!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("E-mail inválido!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("E-mail já registrado!", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 
                 conexao.Close();
@@ -120,6 +127,25 @@ namespace FeiraTecnica
                 MessageBox.Show("preencha todos os valores corretamente para se registrar!", "erro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
+        }
+
+        private bool UsuarioValido(string usuario)
+        {
+            bool retorno = true;
+
+            conexao = new SQLiteConnection("Data Source=" + database + ";Version=3;");
+            conexao.Open();
+
+            SQLiteCommand consulta = new SQLiteCommand("SELECT `usuario` FROM `usuario` WHERE `usuario` = '" + usuario + "'", conexao);
+            SQLiteDataReader myReader = consulta.ExecuteReader();
+
+            while (myReader.Read())
+            {
+                retorno = false;
+            }
+            conexao.Close();
+
+            return retorno;
         }
 
         private bool EmailEhValido(string email)
@@ -135,7 +161,8 @@ namespace FeiraTecnica
             while (myReader.Read())
             {
                 retorno = false;
-            }           
+            }
+            conexao.Close();
 
             return retorno;
         }
@@ -149,7 +176,8 @@ namespace FeiraTecnica
             SQLiteCommand comandoCriarRegistroPessoa = new SQLiteCommand(criarRegistroPessoa, conexao);
             SQLiteCommand comandoCriarRegistroUsuario = new SQLiteCommand(criarRegistroUsuario, conexao);
             comandoCriarRegistroPessoa.ExecuteNonQuery();
-            comandoCriarRegistroUsuario.ExecuteNonQuery();            
+            comandoCriarRegistroUsuario.ExecuteNonQuery();
+            conexao.Close();
         }
 
         private void rbFisica_Click(object sender, EventArgs e)

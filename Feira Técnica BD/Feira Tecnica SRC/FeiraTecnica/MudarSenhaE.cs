@@ -118,7 +118,15 @@ namespace FeiraTecnica
 
         private void tbNewSenha2_KeyDown(object sender, KeyEventArgs e)
         {
-            mudarsenhaTotal();
+            if (e.KeyCode == Keys.Enter)
+            {
+                mudarsenhaTotal();
+            }
+        }
+
+        private void tbNewSenha2_OnValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
